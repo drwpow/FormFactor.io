@@ -12,12 +12,22 @@
     = yield
     %footer.footer.row
       .well.cell
-        %h1 Notes
-        %p.g-b.g-b--m--1of2
-          This doesn’t make any assumptions about how you make your forms, so
-          all <code>&lt;label&gt;</code> text are merely placeholders, and all
-          <code>&lt;fieldset&gt;</code> tags are omitted. It’s advisable to use
-          both in order to make your forms bullet-proof.
+        .g
+          .g-b.g-b--m--1of2
+            %h1.mtf.mbs Notes
+            %p.prl
+              This doesn’t make any assumptions about how you make your forms, so
+              all <code>&lt;label&gt;</code> text are merely placeholders, and all
+              <code>&lt;fieldset&gt;</code> tags are omitted. It’s advisable to use
+              both in order to make your forms bullet-proof.
+          .g-b.g-b--m--1of2
+            %h3.g-b--m--3of4.mtm.mbs.mhc Thanks
+            %p.g-b--m--3of4.mhc.s-625
+              All of the code featured here is original, but much of it was
+              inspired by these talented individuals:
+            %ul.g-b--m--3of4.mhc
+              %li= link_to 'Todd Parker’s CSS-only custom selects', 'http://filamentgroup.github.io/select-css/demo/', target: '_blank'
+              %li= link_to 'Lynn Fisher’s <i>A Single Div</i>', 'http://a.singlediv.com/', target: '_blank'
       .well.cell.tac
         = link_to 'http://dangodesign.net', class: 'footer-logo', target: '_blank', title: 'A project by Drew Powers' do
           = partial 'assets/images/powers.svg'

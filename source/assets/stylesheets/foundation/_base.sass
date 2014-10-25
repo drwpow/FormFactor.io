@@ -23,6 +23,9 @@ ul, p
   margin-bottom: $b-space
   margin-top: 0
 
+ul
+  padding-left: 0
+
 li
   margin-bottom: $b-space-s
   margin-top: 0
@@ -64,7 +67,10 @@ pre
 // ----- Links ----- //
 
 a
+  color: $c-link
   text-decoration: none
+  &:visited
+    color: scale-color($c-link, $lightness: -25%, $saturation: -25%)
 
 // ----- Images ----- //
 
