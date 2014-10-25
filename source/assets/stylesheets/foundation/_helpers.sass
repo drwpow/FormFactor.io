@@ -1,0 +1,88 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins, Extends, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Respond-to ----- //
+// -> Generates a media query
+//
+// $val - the breakpoint size
+// $query - the type of query ('min-width', 'max-width')
+// $media - the media type ('screen', 'print', etc.)
+// @content - the generated content within the mixin
+
+=respond-to($val, $query: min-width, $media: screen)
+  @media #{$media} and ($query: $val)
+    @content
+
+// ----- Retina Displays ----- //
+// -> Set styles based on retina screens and minimum width
+//
+// $min-width - minimum with this should fire
+
+=retina($min-width: 320px)
+  @media only screen and (min-width: #{$val}) and (min-resolution: 108dpi)
+    @content
+
+// ----- Z-index ----- //
+// -> Assigns an appropriate z-index based on the $z-indices array
+//
+// $layer - name of the layer (each layer increments by 10)
+// $add - adjust z-index digit
+
+=z-index($layer, $add: 0)
+  z-index: (10 * index($layer, $z-indices) + $sum)
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+// ----- Clearfix ----- //
+
+.group::after
+  clear: both
+  content: ''
+  display: table
+
+// ----- Ellipsis ----- //
+
+.ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// ----- Image Replacement ----- //
+
+.ir
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  &::before
+    content: ''
+    display: block
+    width: 0
+    height: 150%
+
+// ----- Screen Reader Text ----- //
+
+.srt
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+// ...

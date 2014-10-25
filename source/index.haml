@@ -1,0 +1,66 @@
+---
+title: FormFactor
+---
+
+%main.form
+  %section.row
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %h1 FormFactor
+          %p Efficient, semantic, screen-reader-friendly form elements.
+        .g-b.g-b--m--1of2
+          %table
+            %tr
+              %th Ingredients:
+            %tr
+              %td <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>
+
+  %section.row
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %label
+            Text
+            %input.form-text{type: 'text', required: true}
+        .g-b.g-b--m--1of2
+          %strong HTML
+          :code
+            <label>
+              Text
+              <input type="text">
+            </label>
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %label
+            Email
+            %input.form-email{type: 'email', required: true}
+        .g-b.g-b--m--1of2
+          %strong HTML
+          :code
+            <label>
+              Email
+              <input type="email">
+            </label>
+  %section.row
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %input#switch-0.form-checkbox-switch{type: 'checkbox', required: true}
+          %label{for: 'switch-0'} Switch Below
+        .g-b.g-b--m--1of2
+          %strong HTML
+          :code
+            <input type="checkbox" id="switch-0" class="form-checkbox-switch">
+            <label for="switch-0">Switch Below</label>
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %input#switch-1.form-checkbox-switch--beside{type: 'checkbox', required: true}
+          %label{for: 'switch-1'} Switch Beside
+        .g-b.g-b--m--1of2
+          %strong HTML
+          :code
+            <input type="checkbox" id="switch-0" class="form-checkbox-switch--beside">
+            <label for="switch-0">Switch Beside</label>

@@ -1,0 +1,19 @@
+// *************************************
+//
+//   Row
+//   -> Width-spanning blocks
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// .row[.row--a|b]
+//   / ...
+//
+// *************************************
+
+.row
+  overflow: hidden
+  padding: 0 $b-space
+  + .row
+    border-top: 2px dashed scale-color($c-bg, $lightness: -20%, $saturation: -40%)

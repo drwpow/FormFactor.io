@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %title= current_page.data.title || 'Form Factor'
+    %script{src: '//use.typekit.net/kog5srr.js'}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    = stylesheet_link_tag 'application'
+
+  %body
+    = yield
+    :javascript
+      var f = document.querySelector('form');
+      f.addEventListener('onsubmit', function(e) {
+        e.preventDefault;
+        return false
+      }, false);
