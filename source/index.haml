@@ -3,7 +3,7 @@ title: FormFactor
 ---
 
 %main.form
-  %section.row
+  %header.row
     .well.cell
       .g
         .g-b.g-b--m--1of2
@@ -43,6 +43,31 @@ title: FormFactor
               Email
               <input type="email">
             </label>
+  %section.row
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %label
+            Select
+          %select.form-select
+            %optgroup{label: 'Group A'}
+              %option Option 1
+              %option Option 2
+            %optgroup{label: 'Group B'}
+              %option Option 3
+        .g-b.g-b--m--1of2
+          %strong HTML
+          :code
+            <label>Select</label>
+            <select>
+              <optgroup label="Group A">
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </optgroup>
+              <optgroup label="Group B">
+                <option>Option 3</option>
+              </optgroup>
+            </select>
   %section.row
     .well.cell
       .g
