@@ -23,13 +23,49 @@ title: FormFactor
           %label
             Text
             %input.form-text{type: 'text', required: true}
-        .g-b.g-b--m--1of2
-          %strong HTML
-          :code
-            <label>
-              Text
-              <input type="text">
-            </label>
+        .g-b.g-b--m--1of2.has-tab
+          = partial 'tab', locals: {hook: 'text'}
+          #tab-text-html.tab
+            %strong.tab-label HTML
+            :code
+              <label>
+                Text
+                <input type="text" class="form-text">
+              </label>
+          #tab-text-css.tab
+            %strong.tab-label CSS
+            :code
+              /* Text Base */
+
+              [type=text] {
+                background: none;
+                border-radius: 6px;
+                border: 4px solid #403132;
+                display: block;
+                font: normal 400 24px/1.4 sans-serif;
+                max-width: 100%;
+                padding: 6px 12px;
+                width: 15em;
+              }
+
+              /* Text States */
+
+              [type=text]:focus {
+                background: rgba(black, 0.1);
+                transform: scale(1.05);
+              }
+              [type=text]:hover {
+                background: rgba(255, 255, 255, 0.4);
+                cursor: pointer;
+              }
+          #tab-text-animation.tab
+            %strong.tab-label Animation
+            :code
+              /* Text Animation */
+
+              [type=text] {
+                transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);
+              }
     .well.cell
       .g
         .g-b.g-b--m--1of2
@@ -42,6 +78,19 @@ title: FormFactor
             <label>
               Email
               <input type="email">
+            </label>
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %label
+            Number
+            %input.form-number{type: 'number', required: true}
+        .g-b.g-b--m--1of2
+          %strong HTML
+          :code
+            <label>
+              Email
+              <input type="number">
             </label>
   %section.row
     .well.cell
@@ -72,20 +121,224 @@ title: FormFactor
     .well.cell
       .g
         .g-b.g-b--m--1of2
-          %input#switch-0.form-checkbox-switch{type: 'checkbox', required: true}
-          %label{for: 'switch-0'} Switch Below
+          %input#check-0.form-checkbox{type: 'checkbox', name: 'checkbox', required: true}
+          %label{for: 'check-0'} Checkbox Option 1
+          %input#check-1.form-checkbox{type: 'checkbox', name: 'checkbox', required: true}
+          %label{for: 'check-1'} Checkbox Option 2
+          %input#check-2.form-checkbox{type: 'checkbox', name: 'checkbox', required: true}
+          %label{for: 'check-2'} Checkbox Option 3
+          %input#check-3.form-checkbox{type: 'checkbox', name: 'checkbox', required: true}
+          %label{for: 'check-3'} Checkbox Option 4
         .g-b.g-b--m--1of2
           %strong HTML
           :code
-            <input type="checkbox" id="switch-0" class="form-checkbox-switch">
-            <label for="switch-0">Switch Below</label>
+            <input type="checkbox" id="check" class="form-checkbox">
+            <label for="check">Checkbox Label</label>
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %input#radio-0.form-radio{type: 'radio', name: 'radio', required: true}
+          %label{for: 'radio-0'} Radio Option 1
+          %input#radio-1.form-radio{type: 'radio', name: 'radio', required: true}
+          %label{for: 'radio-1'} Radio Option 2
+          %input#radio-2.form-radio{type: 'radio', name: 'radio', required: true}
+          %label{for: 'radio-2'} Radio Option 3
+          %input#radio-3.form-radio{type: 'radio', name: 'radio', required: true}
+          %label{for: 'radio-3'} Radio Option 4
+        .g-b.g-b--m--1of2
+          %strong HTML
+          :code
+            <input type="checkbox" id="check" class="form-checkbox">
+            <label for="check">Checkbox Label</label>
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %input#switch-0.form-checkbox-switch{type: 'checkbox', required: true}
+          %label{for: 'switch-0'} Switch Below
+        .g-b.g-b--m--1of2.has-tab
+          = partial 'tab', locals: {hook: 'switch-below'}
+          #tab-switch-below-html.tab
+            %strong.tab-label HTML
+            :code
+              <input class="form-switch" id="switch" type="text">
+              <label for="switch">Switch Below</label>
+          #tab-switch-below-css.tab
+            %strong.tab-label CSS
+            :code
+              /* Switch Base */
+
+              .form-switch {
+                display: block;
+                height: 0;
+                position: absolute;
+                right: 100%;
+              }
+
+              .form-switch + label {
+                display: block;
+                margin-bottom: 2em;
+                position: relative;
+                visibility: visible;
+              }
+
+              .form-switch + label::before {
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 2em;
+                border: 4px solid #403132;
+                content: "Off";
+                display: block;
+                font-size: 50%;
+                height: 2em;
+                left: 0;
+                line-height: 2;
+                padding: 0 1em 0 3em;
+                position: absolute;
+                text-align: center;
+                top: 100%;
+                width: 2em;
+                z-index: 10;
+              }
+
+              .form-switch + label::after {
+                background: #e7f4b4;
+                border-radius: 1em;
+                border: 4px solid #403132;
+                content: "";
+                display: block;
+                height: 1em;
+                left: 0;
+                position: absolute;
+                top: 100%;
+                width: 1em;
+                z-index: 11;
+              }
+
+              /* Switch States */
+
+              .form-switch + label:hover {
+                cursor: pointer
+              }
+
+              .form-switch:checked + label::before {
+                background: white;
+                content: "On";
+                padding: 0 3em 0 1em;
+              }
+
+              .form-switch:checked + label::after {
+                transform: translateX(2em);
+              }
+
+              .form-switch:focus + label::after,
+              .form-switch + label:hover::after {
+                background-color: #f8fce8;
+              }
+          #tab-switch-below-animation.tab
+            %strong.tab-label Animation
+            :code
+              /* Switch Animation */
+
+              .form-switch + label::before {
+                transition: background 150ms ease-out, padding 150ms ease-out;
+              }
+
+              .form-switch + label::after {
+                transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1);
+              }
     .well.cell
       .g
         .g-b.g-b--m--1of2
           %input#switch-1.form-checkbox-switch--beside{type: 'checkbox', required: true}
           %label{for: 'switch-1'} Switch Beside
-        .g-b.g-b--m--1of2
-          %strong HTML
-          :code
-            <input type="checkbox" id="switch-0" class="form-checkbox-switch--beside">
-            <label for="switch-0">Switch Beside</label>
+        .g-b.g-b--m--1of2.has-tab
+          = partial 'tab', locals: {hook: 'switch-beside'}
+          #tab-switch-beside-html.tab
+            %strong.tab-label HTML
+            :code
+              <input class="form-switch" id="switch" type="text">
+              <label for="switch">Switch Beside</label>
+          #tab-switch-beside-css.tab
+            %strong.tab-label CSS
+            :code
+              /* Switch Base */
+
+              .form-switch {
+                display: block;
+                height: 0;
+                position: absolute;
+                right: 100%;
+              }
+
+              .form-switch + label {
+                display: block;
+                margin-left: 3.33em;
+                padding-left: 0.625em;
+                position: relative;
+                visibility: visible;
+              }
+
+              .form-switch + label::before {
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 2em;
+                border: 4px solid #403132;
+                content: "Off";
+                display: block;
+                font-size: 50%;
+                height: 2em;
+                line-height: 2;
+                padding: 0 1em 0 3em;
+                position: absolute;
+                right: 100%;
+                text-align: center;
+                top: 0;
+                width: 2em;
+                z-index: 10;
+              }
+
+              .form-switch + label::after {
+                background: #e7f4b4;
+                border-radius: 1em;
+                border: 4px solid #403132;
+                content: "";
+                display: block;
+                height: 1em;
+                position: absolute;
+                right: 100%;
+                top: 0;
+                transform: translateX(-2em);
+                width: 1em;
+                z-index: 11;
+              }
+
+              /* Switch States */
+
+              .form-switch + label:hover {
+                cursor: pointer
+              }
+
+              .form-switch:checked + label::before {
+                background: white;
+                content: "On";
+                padding: 0 3em 0 1em;
+              }
+
+              .form-switch:checked + label::after {
+                transform: translateX(0);
+              }
+
+              .form-switch:focus + label::after,
+              .form-switch + label:hover::after {
+                background-color: #f8fce8;
+              }
+          #tab-switch-beside-animation.tab
+            %strong.tab-label Animation
+            :code
+              /* Switch Animation */
+
+              .form-switch + label::before {
+                transition: background 150ms ease-out, padding 150ms ease-out;
+              }
+
+              .form-switch + label::after {
+                transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1);
+              }
