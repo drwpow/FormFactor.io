@@ -22,7 +22,7 @@ title: FormFactor
         .g-b.g-b--m--1of2
           %label
             Text
-            %input.form-text{type: 'text', required: true}
+            %input.form-text{tabindex: 1, type: 'text', required: true}
         .g-b.g-b--m--1of2.has-tab
           = partial 'tab', locals: {hook: 'text'}
           #tab-text-html.tab
@@ -71,7 +71,7 @@ title: FormFactor
         .g-b.g-b--m--1of2
           %label
             Email
-            %input.form-email{type: 'email', required: true}
+            %input.form-email{tabindex: 2, type: 'email', required: true}
         .g-b.g-b--m--1of2
           %strong HTML
           :code
@@ -84,7 +84,7 @@ title: FormFactor
         .g-b.g-b--m--1of2
           %label
             Number
-            %input.form-number{type: 'number', required: true}
+            %input.form-number{tabindex: 3, type: 'number', required: true}
         .g-b.g-b--m--1of2
           %strong HTML
           :code
@@ -97,8 +97,62 @@ title: FormFactor
       .g
         .g-b.g-b--m--1of2
           %label
+            Date
+            %input.form-date{tabindex: 4, type: 'date', required: true}
+        .g-b.g-b--m--1of2.has-tab
+          = partial 'tab', locals: {hook: 'date'}
+          #tab-date-html.tab
+            %strong.tab-label HTML
+            :code
+              <label>
+                Date
+                <input type="date">
+              </label>
+          #tab-date-css.tab
+            %strong.tab-label CSS
+
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %label
+            Color
+            %input.form-color{tabindex: 5, type: 'color', required: true}
+        .g-b.g-b--m--1of2.has-tab
+          = partial 'tab', locals: {hook: 'color'}
+          #tab-color-html.tab
+            %strong.tab-label HTML
+            :code
+              <label>
+                Color
+                <input type="color">
+              </label>
+          #tab-color-css.tab
+            %strong.tab-label CSS
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %label
+            Range
+            %input.form-range{tabindex: 6, type: 'range', required: true}
+        .g-b.g-b--m--1of2.has-tab
+          = partial 'tab', locals: {hook: 'range'}
+          #tab-range-html.tab
+            %strong.tab-label HTML
+            :code
+              <label>
+                Color
+                <input type="range">
+              </label>
+          #tab-range-css.tab
+            %strong.tab-label CSS
+
+  %section.row
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %label
             Select
-          %select.form-select
+          %select.form-select{tabindex: 5}
             %optgroup{label: 'Group A'}
               %option Option 1
               %option Option 2
@@ -121,14 +175,14 @@ title: FormFactor
     .well.cell
       .g
         .g-b.g-b--m--1of2
-          %input#check-0.form-checkbox{type: 'checkbox', name: 'checkbox', required: true}
-          %label{for: 'check-0'} Checkbox Option 1
-          %input#check-1.form-checkbox{type: 'checkbox', name: 'checkbox', required: true}
-          %label{for: 'check-1'} Checkbox Option 2
-          %input#check-2.form-checkbox{type: 'checkbox', name: 'checkbox', required: true}
-          %label{for: 'check-2'} Checkbox Option 3
-          %input#check-3.form-checkbox{type: 'checkbox', name: 'checkbox', required: true}
-          %label{for: 'check-3'} Checkbox Option 4
+          %input#check-0.form-checkbox{tabindex: 6, type: 'checkbox', name: 'checkbox', required: true}
+          %label{for: 'check-0'} Checkbox 1
+          %input#check-1.form-checkbox{tabindex: 6, type: 'checkbox', name: 'checkbox', required: true}
+          %label{for: 'check-1'} Checkbox 2
+          %input#check-2.form-checkbox{tabindex: 6, type: 'checkbox', name: 'checkbox', required: true}
+          %label{for: 'check-2'} Checkbox 3
+          %input#check-3.form-checkbox{tabindex: 6, type: 'checkbox', name: 'checkbox', required: true}
+          %label{for: 'check-3'} Checkbox 4
         .g-b.g-b--m--1of2
           %strong HTML
           :code
@@ -137,14 +191,14 @@ title: FormFactor
     .well.cell
       .g
         .g-b.g-b--m--1of2
-          %input#radio-0.form-radio{type: 'radio', name: 'radio', required: true}
-          %label{for: 'radio-0'} Radio Option 1
-          %input#radio-1.form-radio{type: 'radio', name: 'radio', required: true}
-          %label{for: 'radio-1'} Radio Option 2
-          %input#radio-2.form-radio{type: 'radio', name: 'radio', required: true}
-          %label{for: 'radio-2'} Radio Option 3
-          %input#radio-3.form-radio{type: 'radio', name: 'radio', required: true}
-          %label{for: 'radio-3'} Radio Option 4
+          %input#radio-0.form-radio{tabindex: 7, type: 'radio', name: 'radio', required: true}
+          %label{for: 'radio-0'} Radio 1
+          %input#radio-1.form-radio{tabindex: 7, type: 'radio', name: 'radio', required: true}
+          %label{for: 'radio-1'} Radio 2
+          %input#radio-2.form-radio{tabindex: 7, type: 'radio', name: 'radio', required: true}
+          %label{for: 'radio-2'} Radio 3
+          %input#radio-3.form-radio{tabindex: 7, type: 'radio', name: 'radio', required: true}
+          %label{for: 'radio-3'} Radio 4
         .g-b.g-b--m--1of2
           %strong HTML
           :code
@@ -153,7 +207,7 @@ title: FormFactor
     .well.cell
       .g
         .g-b.g-b--m--1of2
-          %input#switch-0.form-checkbox-switch{type: 'checkbox', required: true}
+          %input#switch-0.form-checkbox-switch{tabindex: 7, type: 'checkbox', required: true}
           %label{for: 'switch-0'} Switch Below
         .g-b.g-b--m--1of2.has-tab
           = partial 'tab', locals: {hook: 'switch-below'}
@@ -248,7 +302,7 @@ title: FormFactor
     .well.cell
       .g
         .g-b.g-b--m--1of2
-          %input#switch-1.form-checkbox-switch--beside{type: 'checkbox', required: true}
+          %input#switch-1.form-checkbox-switch--beside{tabindex: 8, type: 'checkbox', required: true}
           %label{for: 'switch-1'} Switch Beside
         .g-b.g-b--m--1of2.has-tab
           = partial 'tab', locals: {hook: 'switch-beside'}
@@ -341,4 +395,21 @@ title: FormFactor
 
               .form-switch + label::after {
                 transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1);
+              }
+  %section.row
+    .well.cell
+      .g
+        .g-b.g-b--m--1of2
+          %input#submit.form-submit{tabindex: 9, type: 'submit'}
+        .g-b.g-b--m--1of2.has-tab
+          = partial 'tab', locals: {hook: 'submit'}
+          #tab-submit-html.tab
+            %strong.tab-label HTML
+            :code
+              <input type="submit">
+          #tab-submit-html.tab
+            %strong.tab-label CSS
+            :code
+              input[type=submit] {
+                background-color: ;
               }

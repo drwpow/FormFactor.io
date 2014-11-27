@@ -9,33 +9,25 @@
 //   Defaults
 // -------------------------------------
 
+%default
+  background: none
+  border-radius: 6px
+  border: 4px solid $c-text
+  font: normal 400 #{$b-input}/#{$b-lineHeight-input} $b-input-family
+  max-width: 100%
+  padding: $b-space-xs $b-space-s
+  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1)
+  &:hover
+    background: rgba(white, 0.4)
+    cursor: pointer
+  &:focus
+    background: rgba(black, 0.1)
+    transform: scale(1.05)
+
 .form
-  input
-    background: none
-    border-radius: 6px
-    border: 4px solid $c-text
-    font: normal 400 #{$b-input}/#{$b-lineHeight-input} $b-input-family
-    max-width: 100%
-    padding: $b-space-xs $b-space-s
-
   label
-    font-size: $b-heading-s
+    font-size: 24px
     font-weight: bold
-
-  // States
-
-  input
-    &:hover
-      background: rgba(white, 0.4)
-      cursor: pointer
-    &:focus
-      background: rgba(black, 0.1)
-      transform: scale(1.05)
-
-  // Animation
-
-  input
-    transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1)
 
 // -------------------------------------
 //   Text
@@ -43,24 +35,132 @@
 
 // ----- Text ----- //
 
-.form-text
-  display: none
-
 [type=text]
+  @extend %default
   display: block
   width: 15em
 
 // ----- Email ----- //
 
-.form-email
+[type=email]
+  @extend %default
   display: block
   width: 15em
 
 // ----- Number ----- //
 
-.form-number
+[type=number]
+  @extend %default
   display: block
   width: 15em
+
+// ----- Date ----- //
+
+.form-date
+  @extend %default
+  display: block
+  width: 10em
+
+// ----- Color ----- //
+
+.form-color
+  background-color: transparent
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJNNDkyLjEgMjAuNkM0NjUuNS02IDQyMi41LTYgMzk1LjkgMjAuNkwyODMuOCAxMzIuOGwtNjQuMS02NC4xLTY0LjEgNjQuMSA2NC4xIDY0LjFMMjguMyAzODguNHY0Mi4yTDAgNDU5bDE4LjMgMTguMyAzNi4yLTM0LjZ2LTQ0LjFsMTg0LjQtMTgyLjUgNTcuNyA1Ny43TDExMC40IDQ2MEg3MC43bC0zNC45IDM0LjkgMTYuNSAxNi41IDMxLjMtMjYuOWgzNC41TDMxNS44IDI5M2w2NC4xIDY0LjFMNDQ0IDI5M2wtNjQuMS02NC4xIDExMi4yLTExMi4yYzI2LjUtMjYuNSAyNi41LTY5LjYgMC05Ni4xeiIvPjwvc3ZnPg==)
+  background-position: 90% 50%
+  background-repeat: no-repeat
+  background-size: auto 50%
+  border-radius: 6px
+  border: 4px solid $c-text
+  display: block
+  height: $b-space * 2
+  padding: 0 $b-space * 2 0 0
+  width: 5em
+  &:hover
+    cursor: pointer
+
+// ----- Range ----- //
+
+.form-range
+  background: none
+  cursor: pointer
+  display: block
+  height: $b-space * 2
+  width: 10em
+
+  // States
+
+  &:focus
+    outline: none
+
+  // Webkit
+
+  -webkit-appearance: none
+  &::-webkit-slider-runnable-track
+    background: $c-text
+    border-radius: 4px
+    border: none
+    height: 4px
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+    background: $c-bg
+    border-radius: 50%
+    border: 4px solid $c-text
+    height: $b-space
+    width: $b-space
+
+    // Hack
+    margin-top: 2px
+    transform: translateY(-50%)
+
+  &:hover::-webkit-slider-thumb,
+  &:focus::-webkit-slider-thumb
+    background: $c-bg-t
+
+  // Firefox
+
+  &::-moz-range-track
+    background: $c-text
+    border-radius: 4px
+    border: none
+    height: 4px
+  &::-moz-range-thumb
+    -webkit-appearance: none
+    background: $c-bg
+    border-radius: 50%
+    border: 4px solid $c-text
+    height: $b-space
+    width: $b-space
+
+  &:hover::-moz-range-thumb,
+  &:focus::-moz-range-thumb
+    background: $c-bg-t
+
+  // Animation
+
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb,
+  &::-ms-thumb
+    transition: background-color 250ms ease-out
+
+  // IE
+
+  &::-ms-track
+    background: rgba($c-text, 0.7)
+    border-radius: 4px
+    border: none
+    height: 4px
+
+  &::-ms-fill-lower
+    background: $c-text
+    border-radius: 4px
+
+  &::-ms-thumb
+    background: $c-bg
+    border-radius: 50%
+    border: 4px solid $c-text
+    height: $b-space
+    width: $b-space
+
 
 // -------------------------------------
 //   Select
@@ -78,7 +178,7 @@
   display: block
   font: normal 400 #{$b-input}/#{$b-lineHeight-input} $b-input-family
   padding: $b-space-xs $b-space-l $b-space-xs $b-space-s
-  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1)
+  transition: background-color 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1)
   &::before
     content: "v"
     font-size: 200%
@@ -89,6 +189,7 @@
     background-color: rgba(white, 0.4)
     cursor: pointer
   &:focus, &:hover
+    background-color: rgba(white, 0.4)
     outline: none
 
   // Moz Fix
@@ -108,6 +209,56 @@
   + label
     cursor: pointer
     display: block
+    position: relative
+    &::before
+      border-radius: 3px
+      box-shadow: 0 0 0 3px $c-text
+      content: ""
+      display: inline-block
+      height: 0.75em
+      margin-right: 0.5em
+      width: 0.75em
+    &::after
+      background: $c-text
+      border-radius: 3px
+      content: ""
+      display: block
+      height: 0.5625em
+      margin-right: 0.25em
+      opacity: 0
+      overflow: hidden
+      position: absolute
+      left: 0.09375em
+      top: 0.625em
+      transform: scale(0.4) translateY(-50%)
+      width: 0.5625em
+      z-index: 2
+
+  // States
+
+  + label:hover::before
+    background: rgba(white, 0.6)
+
+  &:active + label::before
+    background: rgba(black, 0.2)
+    transform: scale(1)
+
+  &:focus + label
+    &::before
+      background: rgba(white, 0.6)
+      transform: scale(1.2)
+
+  &:checked + label::after
+    transform: scale(1) translateY(-50%)
+    opacity: 1
+
+  // Animation
+
+  + label
+    &::before
+      transition: background 250ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1)
+    &::after
+      transition: opacity 75ms linear, transform 250ms cubic-bezier(0, 0.5, 0.5, 1)
 
 // ----- Radio ----- //
 
@@ -119,6 +270,47 @@
   + label
     cursor: pointer
     display: block
+    position: relative
+    &::before
+      border-radius: 50%
+      box-shadow: 0 0 0 3px rgba($c-text, 0.2)
+      content: ""
+      display: inline-block
+      height: 0.75em
+      margin-right: 0.5em
+      width: 0.75em
+    &::after
+      background: $c-text
+      border-radius: 50%
+      content: ""
+      display: block
+      height: 0.5625em
+      margin-right: 0.25em
+      opacity: 0
+      overflow: hidden
+      position: absolute
+      left: 0.09375em
+      top: 0.625em
+      transform: scale(0.4) translateY(-50%)
+      width: 0.5625em
+      z-index: 2
+
+  // States
+
+  &:checked + label
+    &::before
+      box-shadow: 0 0 0 3px $c-text
+    &::after
+      opacity: 1
+      transform: scale(1) translateY(-50%)
+
+  // Animation
+
+  + label
+    &::before
+      transition: transform 100ms cubic-bezier(0, 0.5, 0.5, 1)
+    &::after
+      transition: opacity 75ms linear, transform 250ms cubic-bezier(0, 0.5, 0.5, 1)
 
 // ----- Switch Below ----- //
 
@@ -253,3 +445,24 @@
       transition: background 150ms ease-out, padding 150ms ease-out
     &::after
       transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1)
+
+// -------------------------------------
+//   Submit
+// -------------------------------------
+
+.form-submit
+  background: $c-text
+  border-radius: 6px
+  border: 4px solid $c-text
+  color: $c-bg
+  font: normal 400 #{$b-input}/#{$b-lineHeight-input} $b-input-family
+  padding: $b-space/2 $b-space
+  &:hover
+    background: rgba($c-text, 0.8)
+  &:active
+    box-shadow: none
+    transform: translateY(2px)
+
+  // Animation
+
+  transition: background 250ms ease-out

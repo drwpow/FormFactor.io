@@ -7,6 +7,8 @@
     :javascript
       try{Typekit.load();}catch(e){}
     = stylesheet_link_tag 'application'
+    %link{href: '/favicon.png', rel: 'shortcut icon'}
+    %link{href: '/apple-touch.png', rel: 'apple-touch-icon'}
 
   %body
     = yield
