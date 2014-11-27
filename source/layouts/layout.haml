@@ -1,0 +1,48 @@
+!!!
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %title= current_page.data.title || 'Form Factor'
+    %script{src: '//use.typekit.net/kog5srr.js'}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    = stylesheet_link_tag 'application'
+    %link{href: '/favicon.png', rel: 'shortcut icon'}
+    %link{href: '/apple-touch.png', rel: 'apple-touch-icon'}
+
+  %body
+    = yield
+    %footer.footer.row
+      .well.cell
+        .g
+          .g-b.g-b--m--1of2
+            %h1.mtf.mbs Notes
+            %p.prl
+              This site gives you piecemeal snippets to build your own form
+              library. For that reason, there is no <i>Download</i> button
+              anywhere. Maintain and optimize your CSS the way you need to; only
+              use what’s needed.
+            %p.prl
+              All <code>&lt;label&gt;</code> text are merely placeholders, and
+              all <code>&lt;fieldset&gt;</code> tags are omitted. It’s advisable
+              to use both in order to make your forms bullet-proof. Nested
+              <code>&lt;label&gt;</code>s and <code>&lt;input&gt;</code>s are
+              preferred, unless CSS demands siblings.
+          .g-b.g-b--m--1of2
+            %h3.g-b--m--3of4.mtm.mbs.mhc Thanks
+            %p.g-b--m--3of4.mhc.s-625
+              All of the design &amp; code is original, but much of it is
+              inspired by these articles / microsites:
+            %ul.g-b--m--3of4.mhc
+              %li= link_to 'Todd Parker’s CSS-only custom selects', 'http://filamentgroup.github.io/select-css/demo/', target: '_blank'
+              %li= link_to 'Lynn Fisher’s <i>A Single Div</i>', 'http://a.singlediv.com/', target: '_blank'
+              %li= link_to 'Keyboard-Only Navigation', 'http://www.nngroup.com/articles/keyboard-accessibility/', target: '_blank'
+              %li= link_to 'Placeholders in Form Fields Are Harmful', 'http://www.nngroup.com/articles/form-design-placeholders/', target: '_blank'
+      .well.cell.tac
+        = link_to 'http://dangodesign.net', class: 'footer-logo', target: '_blank', title: 'A project by Drew Powers' do
+          = partial 'assets/images/powers.svg'
+        = link_to 'https://github.com/dangodev/FormFactor.io', class: 'footer-github', target: '_blank', title: 'Fork on GitHub' do
+          = partial 'assets/images/github.svg'
+    = javascript_include_tag 'application'
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-8829137-1', 'auto');ga('send', 'pageview');

@@ -1,0 +1,105 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  background: $c-bg
+  color: $c-text
+  font-family: $b-text-family
+  font-size: $b-text
+  line-height: $b-lineHeight
+
+body
+  font-size: 100%
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+ul, p
+  margin-bottom: $b-space
+  margin-top: 0
+
+ul
+  padding-left: 0
+
+li
+  margin-bottom: $b-space-s
+  margin-top: 0
+
+// ----- Headings ----- //
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4
+  font-family: $b-heading-family
+  font-weight: bold
+  line-height: 1.2
+  margin-bottom: $b-space-xs
+  margin-top: 0
+
+h1, .h1
+  font-size: $b-heading-l
+
+h2, .h2
+  font-size: $b-heading
+
+h3, .h3
+  font-size: $b-heading-s
+
+// ----- Code ----- //
+
+pre
+  background-color: rgba(black, 0.1)
+  border-radius: 6px
+  border: 2px solid scale-color($c-bg, $lightness: -15%, $saturation: -50%)
+  font: normal 400 #{$b-code}/#{$b-lineHeight-code} $b-code-family
+  padding: $b-space-xs $b-space-s
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+// ----- Links ----- //
+
+a
+  color: $c-link
+  text-decoration: none
+  &:visited
+    color: scale-color($c-link, $lightness: -25%, $saturation: -25%)
+
+// ----- Images ----- //
+
+img
+  height: auto
+  max-width: 100%
+
+// -------------------------------------
+//   Forms
+// -------------------------------------
+
+input
+  &:focus
+    outline: none
+
+// -------------------------------------
+//   Table
+// -------------------------------------
+
+table
+  width: 100%
+
+th
+  background-color: $c-text
+  color: $c-bg
+  font-size: $b-heading
+  padding: $b-space-s $b-space
+  text-align: left
+
+td
+  border: 1px solid $c-text
+  padding: $b-space-s $b-space

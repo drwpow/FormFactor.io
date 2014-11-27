@@ -1,0 +1,131 @@
+// *************************************
+//
+//   Tools
+//   -> Global utilities
+//
+// *************************************
+
+// -------------------------------------
+//   Display
+// -------------------------------------
+
+.db
+  display: block
+.di
+  display: inline
+.dib
+  display: inline-block
+.dn
+  display: none
+
+// -------------------------------------
+//   Margins
+// -------------------------------------
+
+// ----- Horizontal ----- //
+
+.mhc
+  margin-left: auto
+  margin-right: auto
+
+@each $margin in $b-boxSizing
+  .ma#{nth($margin, 1)}
+    margin: #{nth($margin, 2)}
+  .mb#{nth($margin, 1)}
+    margin-bottom: #{nth($margin, 2)}
+  .ml#{nth($margin, 1)}
+    margin-left: #{nth($margin, 2)}
+  .mr#{nth($margin, 1)}
+    margin-right: #{nth($margin, 2)}
+  .mt#{nth($margin, 1)}
+    margin-top: #{nth($margin, 2)}
+
+// -------------------------------------
+//   Padding
+// -------------------------------------
+
+@each $padding in $b-boxSizing
+  .pa#{nth($padding, 1)}
+    padding: #{nth($padding, 2)}
+  .pb#{nth($padding, 1)}
+    padding-bottom: #{nth($padding, 2)}
+  .pl#{nth($padding, 1)}
+    padding-left: #{nth($padding, 2)}
+  .pr#{nth($padding, 1)}
+    padding-right: #{nth($padding, 2)}
+  .pt#{nth($padding, 1)}
+    padding-top: #{nth($padding, 2)}
+
+// -------------------------------------
+//   Positioning
+// -------------------------------------
+
+.fl
+  float: left
+.fr
+  float: right
+
+.poa
+  position: absolute
+.pof
+  position: fixed
+.por
+  position: relative
+.pos
+  position: static
+
+// -------------------------------------
+//   Text
+// -------------------------------------
+
+// ----- Alignment ----- //
+
+.tac
+  text-align: center
+
+// ----- Family ----- //
+
+.tfb
+  font-family: $b-text-family
+.tfh
+  font-family: $b-heading-family
+
+// ----- Size ----- //
+
+.tss
+  font-size: $b-text-s
+.tsm
+  font-size: $b-text
+.tsl
+  font-size: $b-text-l
+
+// ----- Headings ----- //
+
+.hss
+  font-size: $b-heading-s
+.hsm
+  font-size: $b-heading
+.hsl
+  font-size: $b-heading-l
+
+// ----- Style ----- //
+
+.tsi
+  font-style: italic
+
+// ----- Subdue ----- //
+
+.s-625
+  opacity: 0.625
+
+// ----- Transform ----- //
+
+.ttu
+  text-transform: uppercase
+
+// ----- Weight ----- //
+
+.twn
+  font-weight: normal
+.twb
+  font-weight: bold
