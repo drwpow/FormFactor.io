@@ -13,16 +13,18 @@
   background: none
   border-radius: 6px
   border: 4px solid $c-text
+  cursor: pointer
   font: normal 400 #{$b-input}/#{$b-lineHeight-input} $b-input-family
   max-width: 100%
   padding: $b-space-xs $b-space-s
   transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1)
   &:hover
     background: rgba(white, 0.4)
-    cursor: pointer
   &:focus
     background: rgba(black, 0.1)
     transform: scale(1.05)
+    &:hover
+      cursor: text
 
 .form
   label
@@ -52,7 +54,7 @@
 [type=number]
   @extend %default
   display: block
-  width: 15em
+  width: 7em
 
 // ----- Date ----- //
 
@@ -71,12 +73,11 @@
   background-size: auto 50%
   border-radius: 6px
   border: 4px solid $c-text
+  cursor: pointer
   display: block
   height: $b-space * 2
   padding: 0 $b-space * 2 0 0
   width: 5em
-  &:hover
-    cursor: pointer
 
 // ----- Range ----- //
 
@@ -124,7 +125,6 @@
     border: none
     height: 4px
   &::-moz-range-thumb
-    -webkit-appearance: none
     background: $c-bg
     border-radius: 50%
     border: 4px solid $c-text
@@ -134,13 +134,6 @@
   &:hover::-moz-range-thumb,
   &:focus::-moz-range-thumb
     background: $c-bg-t
-
-  // Animation
-
-  &::-webkit-slider-thumb,
-  &::-moz-range-thumb,
-  &::-ms-thumb
-    transition: background-color 250ms ease-out
 
   // IE
 
@@ -154,6 +147,9 @@
     background: $c-text
     border-radius: 4px
 
+  &::-ms-fill-upper
+    background: none
+
   &::-ms-thumb
     background: $c-bg
     border-radius: 50%
@@ -161,6 +157,16 @@
     height: $b-space
     width: $b-space
 
+  // Animation
+
+  &::-webkit-slider-thumb
+    transition: background-color 250ms ease-out
+
+  &::-moz-range-thumb
+    transition: background-color 250ms ease-out
+
+  &::-ms-thumb
+    transition: background-color 250ms ease-out
 
 // -------------------------------------
 //   Select
