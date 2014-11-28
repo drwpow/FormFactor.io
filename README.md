@@ -10,7 +10,7 @@ An experiment to generate CSS-only form elements that meet the following criteri
 
 ## Demo
 
-[FormFactor.io](//formfactor.io)
+[FormFactor.io](http://formfactor.io)
 
 ## Middleman
 
