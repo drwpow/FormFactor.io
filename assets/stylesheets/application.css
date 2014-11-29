@@ -619,20 +619,21 @@ td {
       margin-right: 0.5em;
       width: 0.75em; }
     .form-checkbox + label::after {
-      background: #403132;
-      border-radius: 3px;
+      background-color: #403132;
+      border-radius: 2px;
+      box-shadow: 0;
+      color: #e7f4b4;
       content: "";
       display: block;
-      height: 0.5625em;
-      margin-right: 0.25em;
+      height: calc(0.75em - 4px);
+      left: 2px;
       opacity: 0;
       overflow: hidden;
       position: absolute;
-      left: 0.09375em;
-      top: 0.625em;
-      -webkit-transform: scale(0.4) translateY(-50%);
-      transform: scale(0.4) translateY(-50%);
-      width: 0.5625em;
+      top: 0.3125em;
+      -webkit-transform: scale(0.4);
+      transform: scale(0.4);
+      width: calc(0.75em - 4px);
       z-index: 2; }
   .form-checkbox + label:hover::before {
     background: rgba(255, 255, 255, 0.6); }
@@ -645,15 +646,15 @@ td {
     -webkit-transform: scale(1.2);
     transform: scale(1.2); }
   .form-checkbox:checked + label::after {
-    -webkit-transform: scale(1) translateY(-50%);
-    transform: scale(1) translateY(-50%);
+    -webkit-transform: scale(1);
+    transform: scale(1);
     opacity: 1; }
   .form-checkbox + label::before {
-    transition: background 250ms ease-out, -webkit-transform 100ms cubic-bezier(0, 0.5, 0.5, 1);
-    transition: background 250ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1); }
+    transition: background-color 250ms ease-out, -webkit-transform 100ms cubic-bezier(0, 0.5, 0.5, 1);
+    transition: background-color 250ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1); }
   .form-checkbox + label::after {
-    transition: opacity 75ms linear, -webkit-transform 250ms cubic-bezier(0, 0.5, 0.5, 1);
-    transition: opacity 75ms linear, transform 250ms cubic-bezier(0, 0.5, 0.5, 1); }
+    transition: opacity 100ms linear, -webkit-transform 100ms ease-out;
+    transition: opacity 100ms linear, transform 100ms ease-out; }
 
 .form-radio {
   display: block;
@@ -673,33 +674,36 @@ td {
       margin-right: 0.5em;
       width: 0.75em; }
     .form-radio + label::after {
-      background: #403132;
       border-radius: 50%;
+      box-shadow: inset 0 0 0 0 #403132, 0 0 0 2px #403132;
       content: "";
-      display: block;
-      height: 0.5625em;
-      margin-right: 0.25em;
+      display: inline-block;
+      height: 0.75em;
+      left: 0;
       opacity: 0;
       overflow: hidden;
       position: absolute;
-      left: 0.09375em;
-      top: 0.625em;
-      -webkit-transform: scale(0.4) translateY(-50%);
-      transform: scale(0.4) translateY(-50%);
-      width: 0.5625em;
+      top: 0.25em;
+      width: 0.75em;
       z-index: 2; }
   .form-radio:checked + label::before {
     box-shadow: 0 0 0 3px #403132; }
   .form-radio:checked + label::after {
-    opacity: 1;
-    -webkit-transform: scale(1) translateY(-50%);
-    transform: scale(1) translateY(-50%); }
+    box-shadow: inset 0 0 0 5px #403132, 0 0 0 2px #403132;
+    opacity: 1; }
+  .form-radio:focus + label::before {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  .form-radio:hover + label::before {
+    background-color: #f8fce8;
+    box-shadow: 0 0 0 3px #403132; }
+  .form-radio:active + label::before {
+    background-color: rgba(0, 0, 0, 0.2); }
   .form-radio + label::before {
-    transition: -webkit-transform 100ms cubic-bezier(0, 0.5, 0.5, 1);
-    transition: transform 100ms cubic-bezier(0, 0.5, 0.5, 1); }
+    transition: background-color 100ms ease-out, box-shadow 150ms ease-out, -webkit-transform 100ms cubic-bezier(0, 0.5, 0.5, 1);
+    transition: background-color 100ms ease-out, box-shadow 150ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1); }
   .form-radio + label::after {
-    transition: opacity 75ms linear, -webkit-transform 250ms cubic-bezier(0, 0.5, 0.5, 1);
-    transition: opacity 75ms linear, transform 250ms cubic-bezier(0, 0.5, 0.5, 1); }
+    transition: box-shadow 150ms ease-out, opacity 100ms linear; }
 
 .form-checkbox-switch {
   display: block;
@@ -752,10 +756,10 @@ td {
   .form-checkbox-switch + label:hover::after {
     background-color: #f8fce8; }
   .form-checkbox-switch + label::before {
-    transition: background 150ms ease-out, padding 150ms ease-out; }
+    transition: background 150ms ease-out, padding 100ms ease-out; }
   .form-checkbox-switch + label::after {
-    transition: background 150ms linear, -webkit-transform 150ms cubic-bezier(0.5, 0, 0.5, 1);
-    transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1); }
+    transition: background 150ms linear, -webkit-transform 150ms cubic-bezier(1, 0, 0, 1);
+    transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1); }
 
 .form-checkbox-switch--beside {
   height: 0;
@@ -810,10 +814,10 @@ td {
   .form-checkbox-switch--beside + label:hover::after {
     background-color: #f8fce8; }
   .form-checkbox-switch--beside + label::before {
-    transition: background 150ms ease-out, padding 150ms ease-out; }
+    transition: background 150ms ease-out, padding 100ms ease-out; }
   .form-checkbox-switch--beside + label::after {
-    transition: background 150ms linear, -webkit-transform 150ms cubic-bezier(0.5, 0, 0.5, 1);
-    transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1); }
+    transition: background 150ms linear, -webkit-transform 150ms cubic-bezier(1, 0, 0, 1);
+    transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1); }
 
 .form-submit {
   background: #403132;

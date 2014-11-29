@@ -174,6 +174,10 @@
                 <strong class="tab-label">CSS</strong>
                 <pre><code class="highlight plaintext">/* Color Base */&#x000A;&#x000A;[type=color] {&#x000A;  background-color: transparent;&#x000A;  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…02NC4xIDExMi4yLTExMi4yYzI2LjUtMjYuNSAyNi41LTY5LjYgMC05Ni4xeiIvPjwvc3ZnPg==);&#x000A;  background-position: 90% 50%;&#x000A;  background-repeat: no-repeat;&#x000A;  background-size: auto 50%;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  height: 48px;&#x000A;  padding: 0 48px 0 0;&#x000A;  width: 5em;&#x000A;}&#x000A;</code></pre>
               </div>
+              <div class="tab" id="tab-color-animation">
+                <strong class="tab-label">Animation</strong>
+                <pre><code class="highlight plaintext"></code></pre>
+              </div>
             </div>
           </div>
         </div>
@@ -244,9 +248,24 @@
               <input class="form-checkbox" id="check-3" name="checkbox" required tabindex="8" type="checkbox">
               <label for="check-3">Checkbox 4</label>
             </div>
-            <div class="g-b g-b--m--1of2">
-              <strong>HTML</strong>
-              <pre><code class="highlight plaintext">&lt;input type="checkbox" id="check" class="form-checkbox"&gt;&#x000A;&lt;label for="check"&gt;Checkbox Label&lt;/label&gt;&#x000A;</code></pre>
+            <div class="g-b g-b--m--1of2 has-tab">
+              <menu class="tab-nav">
+                <li><a data-target="#tab-checkbox-html" href="javascript:">HTML</a></li>
+                <li><a data-target="#tab-checkbox-css" href="javascript:">CSS</a></li>
+                <li><a data-target="#tab-checkbox-animation" href="javascript:">Animation</a></li>
+              </menu>
+              <div class="tab" id="tab-checkbox-html">
+                <strong class="tab-label">HTML</strong>
+                <pre><code class="highlight plaintext">&lt;input type="checkbox" id="check" class="form-checkbox"&gt;&#x000A;&lt;label for="check"&gt;Checkbox Label&lt;/label&gt;&#x000A;</code></pre>
+              </div>
+              <div class="tab" id="tab-checkbox-css">
+                <strong class="tab-label">CSS</strong>
+                <pre><code class="highlight plaintext">/* Checkbox Base */&#x000A;&#x000A;.form-checkbox {&#x000A;  display: block;&#x000A;  height: 0;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;}&#x000A;&#x000A;.form-checkbox + label {&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  position: relative;&#x000A;}&#x000A;&#x000A;.form-checkbox + label::before {&#x000A;  border-radius: 3px;&#x000A;  box-shadow: 0 0 0 3px #403132;&#x000A;  content: "";&#x000A;  display: inline-block;&#x000A;  height: 0.75em;&#x000A;  margin-right: 0.5em;&#x000A;  width: 0.75em;&#x000A;}&#x000A;&#x000A;.form-checkbox + label::after {&#x000A;  background-color: #403132;&#x000A;  border-radius: 2px;&#x000A;  box-shadow: 0;&#x000A;  color: #e7f4b4;&#x000A;  content: "";&#x000A;  display: block;&#x000A;  height: calc(0.75em - 4px);&#x000A;  left: 2px;&#x000A;  opacity: 0;&#x000A;  overflow: hidden;&#x000A;  position: absolute;&#x000A;  top: 0.3125em;&#x000A;  transform: scale(0.4);&#x000A;  width: calc(0.75em - 4px);&#x000A;  z-index: 2;&#x000A;}&#x000A;&#x000A;/* Checkbox States */&#x000A;&#x000A;.form-checkbox + label:hover::before {&#x000A;  background: rgba(255, 255, 255, 0.6);&#x000A;}&#x000A;&#x000A;.form-checkbox:active + label::before {&#x000A;  background: rgba(0, 0, 0, 0.2);&#x000A;  transform: scale(1);&#x000A;}&#x000A;&#x000A;.form-checkbox:focus + label::before {&#x000A;  background: rgba(255, 255, 255, 0.6);&#x000A;  transform: scale(1.2);&#x000A;}&#x000A;&#x000A;.form-checkbox:checked + label::after {&#x000A;  transform: scale(1);&#x000A;  opacity: 1;&#x000A;}&#x000A;</code></pre>
+              </div>
+              <div class="tab" id="tab-checkbox-animation">
+                <strong class="tab-label">Animation</strong>
+                <pre><code class="highlight plaintext">.form-checkbox + label::before {&#x000A;  transition: background-color 250ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;&#x000A;.form-checkbox + label::after {&#x000A;  transition: opacity 100ms linear, transform 100ms ease-out;&#x000A;}&#x000A;</code></pre>
+              </div>
             </div>
           </div>
         </div>
@@ -290,7 +309,7 @@
               </div>
               <div class="tab" id="tab-switch-below-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">/* Switch Animation */&#x000A;&#x000A;.form-switch + label::before {&#x000A;  transition: background 150ms ease-out, padding 150ms ease-out;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1);&#x000A;}&#x000A;</code></pre>
+                <pre><code class="highlight plaintext">/* Switch Animation */&#x000A;&#x000A;.form-switch + label::before {&#x000A;  transition: background 150ms ease-out, padding 100ms ease-out;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1);&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -317,7 +336,7 @@
               </div>
               <div class="tab" id="tab-switch-beside-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">/* Switch Animation */&#x000A;&#x000A;.form-switch + label::before {&#x000A;  transition: background 150ms ease-out, padding 150ms ease-out;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1);&#x000A;}&#x000A;</code></pre>
+                <pre><code class="highlight plaintext">/* Switch Animation */&#x000A;&#x000A;.form-switch + label::before {&#x000A;  transition: background 150ms ease-out, padding 100ms ease-out;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1);&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
