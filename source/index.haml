@@ -258,6 +258,9 @@ title: FormFactor
                 padding: 0 48px 0 0;
                 width: 5em;
               }
+          #tab-color-animation.tab
+            %strong.tab-label Animation
+            :code
     .well.cell
       .g
         .g-b.g-b--m--1of2
@@ -419,11 +422,89 @@ title: FormFactor
           %label{for: 'check-2'} Checkbox 3
           %input#check-3.form-checkbox{tabindex: 8, type: 'checkbox', name: 'checkbox', required: true}
           %label{for: 'check-3'} Checkbox 4
-        .g-b.g-b--m--1of2
-          %strong HTML
-          :code
-            <input type="checkbox" id="check" class="form-checkbox">
-            <label for="check">Checkbox Label</label>
+        .g-b.g-b--m--1of2.has-tab
+          = partial 'tab', locals: {hook: 'checkbox'}
+          #tab-checkbox-html.tab
+            %strong.tab-label HTML
+            :code
+              <input type="checkbox" id="check" class="form-checkbox">
+              <label for="check">Checkbox Label</label>
+          #tab-checkbox-css.tab
+            %strong.tab-label CSS
+            :code
+              /* Checkbox Base */
+
+              .form-checkbox {
+                display: block;
+                height: 0;
+                position: absolute;
+                right: 100%;
+              }
+
+              .form-checkbox + label {
+                cursor: pointer;
+                display: block;
+                position: relative;
+              }
+
+              .form-checkbox + label::before {
+                border-radius: 3px;
+                box-shadow: 0 0 0 3px #403132;
+                content: "";
+                display: inline-block;
+                height: 0.75em;
+                margin-right: 0.5em;
+                width: 0.75em;
+              }
+
+              .form-checkbox + label::after {
+                background-color: #403132;
+                border-radius: 2px;
+                box-shadow: 0;
+                color: #e7f4b4;
+                content: "";
+                display: block;
+                height: calc(0.75em - 4px);
+                left: 2px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 0.3125em;
+                transform: scale(0.4);
+                width: calc(0.75em - 4px);
+                z-index: 2;
+              }
+
+              /* Checkbox States */
+
+              .form-checkbox + label:hover::before {
+                background: rgba(255, 255, 255, 0.6);
+              }
+
+              .form-checkbox:active + label::before {
+                background: rgba(0, 0, 0, 0.2);
+                transform: scale(1);
+              }
+
+              .form-checkbox:focus + label::before {
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(1.2);
+              }
+
+              .form-checkbox:checked + label::after {
+                transform: scale(1);
+                opacity: 1;
+              }
+          #tab-checkbox-animation.tab
+            %strong.tab-label Animation
+            :code
+              .form-checkbox + label::before {
+                transition: background-color 250ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1);
+              }
+
+              .form-checkbox + label::after {
+                transition: opacity 100ms linear, transform 100ms ease-out;
+              }
     .well.cell
       .g
         .g-b.g-b--m--1of2
@@ -529,11 +610,11 @@ title: FormFactor
               /* Switch Animation */
 
               .form-switch + label::before {
-                transition: background 150ms ease-out, padding 150ms ease-out;
+                transition: background 150ms ease-out, padding 100ms ease-out;
               }
 
               .form-switch + label::after {
-                transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1);
+                transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1);
               }
     .well.cell
       .g
@@ -626,11 +707,11 @@ title: FormFactor
               /* Switch Animation */
 
               .form-switch + label::before {
-                transition: background 150ms ease-out, padding 150ms ease-out;
+                transition: background 150ms ease-out, padding 100ms ease-out;
               }
 
               .form-switch + label::after {
-                transition: background 150ms linear, transform 150ms cubic-bezier(0.5, 0, 0.5, 1);
+                transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1);
               }
   %section.row
     .well.cell
