@@ -39,26 +39,32 @@
             <div class="g-b g-b--m--1of2">
               <label>
                 Text
-                <input class="form-text" required tabindex="1" type="text">
+                <input class="form-text" tabindex="1" type="text">
               </label>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-text-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-text-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-text-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-text-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-text-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-text-animation">Animation</button>
+                </li>
               </menu>
               <div class="tab" id="tab-text-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;label&gt;&#x000A;  Text&#x000A;  &lt;input type="text"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;label&gt;&#x000A;  Text&#x000A;  &lt;input type="text"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
               </div>
               <div class="tab" id="tab-text-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Text Base */&#x000A;&#x000A;[type=text] {&#x000A;  background: none;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  font: normal 400 24px/1.4 sans-serif;&#x000A;  max-width: 100%;&#x000A;  padding: 6px 12px;&#x000A;  width: 15em;&#x000A;}&#x000A;&#x000A;/* Text States */&#x000A;&#x000A;[type=text]:focus {&#x000A;  background: rgba(black, 0.1);&#x000A;  transform: scale(1.05);&#x000A;}&#x000A;[type=text]:focus:hover {&#x000A;  cursor: text;&#x000A;}&#x000A;[type=text]:hover {&#x000A;  background: rgba(255, 255, 255, 0.4);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Text Base */&#x000A;&#x000A;[type=text] {&#x000A;  background: none;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  font: normal 400 24px/1.4 sans-serif;&#x000A;  max-width: 100%;&#x000A;  padding: 6px 12px;&#x000A;  width: 15em;&#x000A;}&#x000A;&#x000A;/* Text States */&#x000A;&#x000A;[type=text]:focus {&#x000A;  background: rgba(black, 0.1);&#x000A;  transform: scale(1.05);&#x000A;}&#x000A;[type=text]:focus:hover {&#x000A;  cursor: text;&#x000A;}&#x000A;[type=text]:hover {&#x000A;  background: rgba(255, 255, 255, 0.4);&#x000A;}&#x000A;</code></pre>
               </div>
               <div class="tab" id="tab-text-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">/* Text Animation */&#x000A;&#x000A;[type=text] {&#x000A;  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Text Animation */&#x000A;&#x000A;[type=text] {&#x000A;  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -68,26 +74,32 @@
             <div class="g-b g-b--m--1of2">
               <label>
                 Email
-                <input class="form-email" required tabindex="2" type="email">
+                <input class="form-email" tabindex="2" type="email">
               </label>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-email-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-email-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-email-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-email-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-email-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-email-animation">Animation</button>
+                </li>
               </menu>
               <div class="tab" id="tab-email-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;label&gt;&#x000A;  &lt;input type="email"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;label&gt;&#x000A;  &lt;input type="email"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
               </div>
               <div class="tab" id="tab-email-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Email Base */&#x000A;&#x000A;[type=email] {&#x000A;  background: none;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  font: normal 400 24px/1.4 sans-serif;&#x000A;  max-width: 100%;&#x000A;  padding: 6px 12px;&#x000A;  width: 15em;&#x000A;}&#x000A;&#x000A;/* Email States */&#x000A;&#x000A;[type=email]:focus {&#x000A;  background: rgba(black, 0.1);&#x000A;  transform: scale(1.05);&#x000A;}&#x000A;[type=email]:focus:hover {&#x000A;  cursor: text;&#x000A;}&#x000A;[type=email]:hover {&#x000A;  background: rgba(255, 255, 255, 0.4);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Email Base */&#x000A;&#x000A;[type=email] {&#x000A;  background: none;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  font: normal 400 24px/1.4 sans-serif;&#x000A;  max-width: 100%;&#x000A;  padding: 6px 12px;&#x000A;  width: 15em;&#x000A;}&#x000A;&#x000A;/* Email States */&#x000A;&#x000A;[type=email]:focus {&#x000A;  background: rgba(black, 0.1);&#x000A;  transform: scale(1.05);&#x000A;}&#x000A;[type=email]:focus:hover {&#x000A;  cursor: text;&#x000A;}&#x000A;[type=email]:hover {&#x000A;  background: rgba(255, 255, 255, 0.4);&#x000A;}&#x000A;</code></pre>
               </div>
               <div class="tab" id="tab-email-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">/* Email Animation */&#x000A;&#x000A;[type=email] {&#x000A;  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Email Animation */&#x000A;&#x000A;[type=email] {&#x000A;  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -97,26 +109,32 @@
             <div class="g-b g-b--m--1of2">
               <label>
                 Number
-                <input class="form-number" required tabindex="3" type="number">
+                <input class="form-number" tabindex="3" type="number">
               </label>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-number-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-number-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-number-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-number-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-number-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-number-animation">Animation</button>
+                </li>
               </menu>
               <div class="tab" id="tab-number-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;label&gt;&#x000A;  &lt;input type="number"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;label&gt;&#x000A;  &lt;input type="number"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
               </div>
               <div class="tab" id="tab-number-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Number Base */&#x000A;&#x000A;[type=number] {&#x000A;  background: none;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  font: normal 400 24px/1.4 sans-serif;&#x000A;  max-width: 100%;&#x000A;  padding: 6px 12px;&#x000A;  width: 7em;&#x000A;}&#x000A;&#x000A;/* Number States */&#x000A;&#x000A;[type=number]:focus {&#x000A;  background: rgba(black, 0.1);&#x000A;  transform: scale(1.05);&#x000A;}&#x000A;[type=number]:focus:hover {&#x000A;  cursor: text;&#x000A;}&#x000A;[type=number]:hover {&#x000A;  background: rgba(255, 255, 255, 0.4);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Number Base */&#x000A;&#x000A;[type=number] {&#x000A;  background: none;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  font: normal 400 24px/1.4 sans-serif;&#x000A;  max-width: 100%;&#x000A;  padding: 6px 12px;&#x000A;  width: 7em;&#x000A;}&#x000A;&#x000A;/* Number States */&#x000A;&#x000A;[type=number]:focus {&#x000A;  background: rgba(black, 0.1);&#x000A;  transform: scale(1.05);&#x000A;}&#x000A;[type=number]:focus:hover {&#x000A;  cursor: text;&#x000A;}&#x000A;[type=number]:hover {&#x000A;  background: rgba(255, 255, 255, 0.4);&#x000A;}&#x000A;</code></pre>
               </div>
               <div class="tab" id="tab-number-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">/* Number Animation */&#x000A;&#x000A;[type=number] {&#x000A;  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Number Animation */&#x000A;&#x000A;[type=number] {&#x000A;  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -126,28 +144,38 @@
         <div class="well cell">
           <div class="g">
             <div class="g-b g-b--m--1of2">
-              <label>
-                Date
-                <input class="form-date" required tabindex="4" type="date">
-              </label>
+              <input class="form-checkbox" id="check-0" name="checkbox" tabindex="8" type="checkbox" value="checked">
+              <label for="check-0">Checkbox 1</label>
+              <input class="form-checkbox" id="check-1" name="checkbox" tabindex="8" type="checkbox" value="checked">
+              <label for="check-1">Checkbox 2</label>
+              <input class="form-checkbox" id="check-2" name="checkbox" tabindex="8" type="checkbox" value="checked">
+              <label for="check-2">Checkbox 3</label>
+              <input class="form-checkbox" id="check-3" name="checkbox" tabindex="8" type="checkbox" value="checked">
+              <label for="check-3">Checkbox 4</label>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-date-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-date-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-date-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-checkbox-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-checkbox-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-checkbox-animation">Animation</button>
+                </li>
               </menu>
-              <div class="tab" id="tab-date-html">
+              <div class="tab" id="tab-checkbox-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;label&gt;&#x000A;  Date&#x000A;  &lt;input type="date"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;input type="checkbox" id="check" class="form-checkbox"&gt;&#x000A;&lt;label for="check"&gt;Checkbox Label&lt;/label&gt;&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-date-css">
+              <div class="tab" id="tab-checkbox-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Date Base */&#x000A;&#x000A;[type=date] {&#x000A;  background: none;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  font: normal 400 24px/1.4 sans-serif;&#x000A;  max-width: 100%;&#x000A;  padding: 6px 12px;&#x000A;  width: 15em;&#x000A;}&#x000A;&#x000A;/* Date States */&#x000A;&#x000A;[type=date]:focus {&#x000A;  background: rgba(black, 0.1);&#x000A;  transform: scale(1.05);&#x000A;}&#x000A;[type=date]:focus:hover {&#x000A;  cursor: text;&#x000A;}&#x000A;[type=date]:hover {&#x000A;  background: rgba(255, 255, 255, 0.4);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Checkbox Base */&#x000A;&#x000A;.form-checkbox {&#x000A;  display: block;&#x000A;  height: 0;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;}&#x000A;&#x000A;.form-checkbox + label {&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  position: relative;&#x000A;}&#x000A;&#x000A;.form-checkbox + label::before {&#x000A;  border-radius: 3px;&#x000A;  box-shadow: 0 0 0 3px #403132;&#x000A;  content: "";&#x000A;  display: inline-block;&#x000A;  height: 0.75em;&#x000A;  margin-right: 0.5em;&#x000A;  width: 0.75em;&#x000A;}&#x000A;&#x000A;.form-checkbox + label::after {&#x000A;  background-color: #403132;&#x000A;  border-radius: 2px;&#x000A;  box-shadow: 0;&#x000A;  color: #e7f4b4;&#x000A;  content: "";&#x000A;  display: block;&#x000A;  height: calc(0.75em - 4px);&#x000A;  left: 2px;&#x000A;  opacity: 0;&#x000A;  overflow: hidden;&#x000A;  position: absolute;&#x000A;  top: 0.3125em;&#x000A;  transform: scale(0.4);&#x000A;  width: calc(0.75em - 4px);&#x000A;  z-index: 2;&#x000A;}&#x000A;&#x000A;/* Checkbox States */&#x000A;&#x000A;.form-checkbox + label:hover::before {&#x000A;  background: rgba(255, 255, 255, 0.6);&#x000A;}&#x000A;&#x000A;.form-checkbox:active + label::before {&#x000A;  background: rgba(0, 0, 0, 0.2);&#x000A;  transform: scale(1);&#x000A;}&#x000A;&#x000A;.form-checkbox:focus + label::before {&#x000A;  background: rgba(255, 255, 255, 0.6);&#x000A;  transform: scale(1.2);&#x000A;}&#x000A;&#x000A;.form-checkbox:checked + label::after {&#x000A;  transform: scale(1);&#x000A;  opacity: 1;&#x000A;}&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-date-animation">
+              <div class="tab" id="tab-checkbox-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">/* Date Animation */&#x000A;&#x000A;[type=date] {&#x000A;  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>.form-checkbox + label::before {&#x000A;  transition: background-color 250ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;&#x000A;.form-checkbox + label::after {&#x000A;  transition: opacity 100ms linear, transform 100ms ease-out;&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -155,28 +183,40 @@
         <div class="well cell">
           <div class="g">
             <div class="g-b g-b--m--1of2">
-              <label>
-                Color
-                <input class="form-color" required tabindex="5" type="color">
-              </label>
+              <fieldset role="radiogroup">
+                <input class="form-radio" id="radio-0" name="radio" tabindex="9" type="radio" value="selected">
+                <label for="radio-0">Radio 1</label>
+                <input class="form-radio" id="radio-1" name="radio" tabindex="9" type="radio" value="selected">
+                <label for="radio-1">Radio 2</label>
+                <input class="form-radio" id="radio-2" name="radio" tabindex="9" type="radio" value="selected">
+                <label for="radio-2">Radio 3</label>
+                <input class="form-radio" id="radio-3" name="radio" tabindex="9" type="radio" value="selected">
+                <label for="radio-3">Radio 4</label>
+              </fieldset>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-color-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-color-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-color-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-radio-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-radio-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-radio-animation">Animation</button>
+                </li>
               </menu>
-              <div class="tab" id="tab-color-html">
+              <div class="tab" id="tab-radio-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;label&gt;&#x000A;  Color&#x000A;  &lt;input type="color"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;fieldset role="radiogroup"&gt;&#x000A;  &lt;input class="form-checkbox" id="radio" name="radio" type="radio"&gt;&#x000A;  &lt;label for="radio"&gt;Radio Label&lt;/label&gt;&#x000A;&lt;/fieldset&gt;&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-color-css">
+              <div class="tab" id="tab-radio-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Color Base */&#x000A;&#x000A;[type=color] {&#x000A;  background-color: transparent;&#x000A;  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…02NC4xIDExMi4yLTExMi4yYzI2LjUtMjYuNSAyNi41LTY5LjYgMC05Ni4xeiIvPjwvc3ZnPg==);&#x000A;  background-position: 90% 50%;&#x000A;  background-repeat: no-repeat;&#x000A;  background-size: auto 50%;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  height: 48px;&#x000A;  padding: 0 48px 0 0;&#x000A;  width: 5em;&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Radio Base */&#x000A;&#x000A;.form-radio {&#x000A;  display: block;&#x000A;  height: 0;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;}&#x000A;&#x000A;.form-radio + label {&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  position: relative;&#x000A;}&#x000A;&#x000A;.form-radio + label::before {&#x000A;  border-radius: 50%;&#x000A;  box-shadow: 0 0 0 3px rgba(64, 49, 50, 0.2);&#x000A;  content: "";&#x000A;  display: inline-block;&#x000A;  height: 0.75em;&#x000A;  margin-right: 0.5em;&#x000A;  width: 0.75em;&#x000A;}&#x000A;&#x000A;.form-radio + label::after {&#x000A;  border-radius: 50%;&#x000A;  box-shadow: inset 0 0 0 0 #403132, 0 0 0 2px #403132;&#x000A;  content: "";&#x000A;  display: inline-block;&#x000A;  height: 0.75em;&#x000A;  left: 0;&#x000A;  opacity: 0;&#x000A;  overflow: hidden;&#x000A;  position: absolute;&#x000A;  top: 0.25em;&#x000A;  width: 0.75em;&#x000A;  z-index: 2;&#x000A;}&#x000A;&#x000A;/* Radio States */&#x000A;&#x000A;.form-radio:checked + label::before {&#x000A;  box-shadow: 0 0 0 3px #403132;&#x000A;}&#x000A;&#x000A;.form-radio:checked + label::after {&#x000A;  box-shadow: inset 0 0 0 5px #403132, 0 0 0 2px #403132;&#x000A;  opacity: 1;&#x000A;}&#x000A;&#x000A;.form-radio:focus + label::before {&#x000A;  -webkit-transform: scale(1.2);&#x000A;  transform: scale(1.2);&#x000A;}&#x000A;&#x000A;.form-radio:hover + label::before {&#x000A;  background-color: #f8fce8;&#x000A;  box-shadow: 0 0 0 3px #403132;&#x000A;}&#x000A;&#x000A;.form-radio:active + label::before{&#x000A;  background-color: rgba(0, 0, 0, 0.2);&#x000A;}&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-color-animation">
+              <div class="tab" id="tab-radio-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext"></code></pre>
+                <pre class="highlight plaintext"><code>/* Radio Animation */&#x000A;&#x000A;.form-radio + label::before {&#x000A;  transition: background-color 100ms ease-out, box-shadow 150ms ease-out, -webkit-transform 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;  transition: background-color 100ms ease-out, box-shadow 150ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;.form-radio + label::after {&#x000A;  transition: box-shadow 150ms ease-out, opacity 100ms linear;&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -184,28 +224,65 @@
         <div class="well cell">
           <div class="g">
             <div class="g-b g-b--m--1of2">
-              <label>
-                Range
-                <input class="form-range" required tabindex="6" type="range">
-              </label>
+              <input class="form-checkbox-switch" id="switch-0" tabindex="10" type="checkbox" value="on">
+              <label for="switch-0">Switch Below</label>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-range-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-range-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-range-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-switch-below-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-switch-below-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-switch-below-animation">Animation</button>
+                </li>
               </menu>
-              <div class="tab" id="tab-range-html">
+              <div class="tab" id="tab-switch-below-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;label&gt;&#x000A;  Color&#x000A;  &lt;input type="range"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;input class="form-switch" id="switch" type="text" value="on"&gt;&#x000A;&lt;label for="switch"&gt;Switch Below&lt;/label&gt;&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-range-css">
+              <div class="tab" id="tab-switch-below-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Range Base */&#x000A;&#x000A;[type=range] {&#x000A;  background: none;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  height: 48px;&#x000A;  width: 10em;&#x000A;}&#x000A;&#x000A;/* Webkit */&#x000A;&#x000A;[type=range] {&#x000A;  -webkit-appearance: none;&#x000A;}&#x000A;&#x000A;[type=range]::-webkit-slider-runnable-track {&#x000A;  background: #403132;&#x000A;  border-radius: 4px;&#x000A;  border: none;&#x000A;  height: 4px;&#x000A;}&#x000A;&#x000A;[type=range]::-webkit-slider-thumb {&#x000A;  -webkit-appearance: none;&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 50%;&#x000A;  border: 4px solid $c-text;&#x000A;  height: 24px;&#x000A;  width: 24px;&#x000A;  /* Webkit alignment hack */&#x000A;  margin-top: 2px;&#x000A;  transform: translateY(-50%);&#x000A;}&#x000A;&#x000A;[type=range]:focus::-webkit-slider-thumb,&#x000A;[type=range]:hover::-webkit-slider-thumb {&#x000A;  background: #f8fce8;&#x000A;}&#x000A;&#x000A;/* Firefox */&#x000A;&#x000A;[type=range]::-moz-range-track {&#x000A;  background: #403132;&#x000A;  border-radius: 4px;&#x000A;  border: none;&#x000A;  height: 4px;&#x000A;}&#x000A;&#x000A;[type=range]::-moz-range-thumb {&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 50%;&#x000A;  border: 4px solid #403132;&#x000A;  height: #403132;&#x000A;  width: #403132;&#x000A;}&#x000A;&#x000A;[type=range]:hover::-moz-range-thumb,&#x000A;[type=range]:focus::-moz-range-thumb {&#x000A;  background: #f8fce8;&#x000A;}&#x000A;&#x000A;/* IE */&#x000A;&#x000A;[type=range]::-ms-track {&#x000A;  background: rgba($c-text, 0.7);&#x000A;  border-radius: 4px;&#x000A;  border: none;&#x000A;  height: 4px;&#x000A;}&#x000A;&#x000A;[type=range]::-ms-fill-lower {&#x000A;  background: $c-text;&#x000A;  border-radius: 4px;&#x000A;}&#x000A;&#x000A;[type=range]::-ms-fill-upper {&#x000A;  background: none;&#x000A;}&#x000A;&#x000A;[type=range]::-ms-thumb {&#x000A;  background: $c-bg;&#x000A;  border-radius: 50%;&#x000A;  border: 4px solid $c-text;&#x000A;  height: $b-space;&#x000A;  width: $b-space;&#x000A;}&#x000A;&#x000A;[type=range]:hover::-ms-thumb,&#x000A;[type=range]:focus::-ms-thumb {&#x000A;  background: #f8fce8;&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Switch Base */&#x000A;&#x000A;.form-switch {&#x000A;  display: block;&#x000A;  height: 0;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;}&#x000A;&#x000A;.form-switch + label {&#x000A;  display: block;&#x000A;  margin-bottom: 2em;&#x000A;  position: relative;&#x000A;  visibility: visible;&#x000A;}&#x000A;&#x000A;.form-switch + label::before {&#x000A;  background: rgba(0, 0, 0, 0.2);&#x000A;  border-radius: 2em;&#x000A;  border: 4px solid #403132;&#x000A;  content: "Off";&#x000A;  display: block;&#x000A;  font-size: 50%;&#x000A;  height: 2em;&#x000A;  left: 0;&#x000A;  line-height: 2;&#x000A;  padding: 0 1em 0 3em;&#x000A;  position: absolute;&#x000A;  text-align: center;&#x000A;  top: 100%;&#x000A;  width: 2em;&#x000A;  z-index: 10;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 1em;&#x000A;  border: 4px solid #403132;&#x000A;  content: "";&#x000A;  display: block;&#x000A;  height: 1em;&#x000A;  left: 0;&#x000A;  position: absolute;&#x000A;  top: 100%;&#x000A;  width: 1em;&#x000A;  z-index: 11;&#x000A;}&#x000A;&#x000A;/* Switch States */&#x000A;&#x000A;.form-switch + label:hover {&#x000A;  cursor: pointer&#x000A;}&#x000A;&#x000A;.form-switch:checked + label::before {&#x000A;  background: white;&#x000A;  content: "On";&#x000A;  padding: 0 3em 0 1em;&#x000A;}&#x000A;&#x000A;.form-switch:checked + label::after {&#x000A;  transform: translateX(2em);&#x000A;}&#x000A;&#x000A;.form-switch:focus + label::after,&#x000A;.form-switch + label:hover::after {&#x000A;  background-color: #f8fce8;&#x000A;}&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-range-animation">
+              <div class="tab" id="tab-switch-below-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">[type=range]::-webkit-slider-thumb {&#x000A;  transition: background-color 250ms ease-out;&#x000A;}&#x000A;&#x000A;[type=range]::-moz-range-thumb {&#x000A;  transition: background-color 250ms ease-out;&#x000A;}&#x000A;&#x000A;[type=range]::-ms-thumb {&#x000A;  transition: background-color 250ms ease-out;&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Switch Animation */&#x000A;&#x000A;.form-switch + label::before {&#x000A;  transition: background 150ms ease-out, padding 100ms ease-out;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1);&#x000A;}&#x000A;</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="well cell">
+          <div class="g">
+            <div class="g-b g-b--m--1of2">
+              <input class="form-checkbox-switch--beside" id="switch-1" tabindex="11" type="checkbox" value="on">
+              <label for="switch-1">Switch Beside</label>
+            </div>
+            <div class="g-b g-b--m--1of2 has-tab">
+              <menu class="tab-nav">
+                <li>
+                  <button data-target="#tab-switch-beside-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-switch-beside-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-switch-beside-animation">Animation</button>
+                </li>
+              </menu>
+              <div class="tab" id="tab-switch-beside-html">
+                <strong class="tab-label">HTML</strong>
+                <pre class="highlight plaintext"><code>&lt;input class="form-switch" id="switch" name="switch" type="text" value="on"&gt;&#x000A;&lt;label for="switch"&gt;Switch Beside&lt;/label&gt;&#x000A;</code></pre>
+              </div>
+              <div class="tab" id="tab-switch-beside-css">
+                <strong class="tab-label">CSS</strong>
+                <pre class="highlight plaintext"><code>/* Switch Base */&#x000A;&#x000A;.form-switch {&#x000A;  display: block;&#x000A;  height: 0;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;}&#x000A;&#x000A;.form-switch + label {&#x000A;  display: block;&#x000A;  margin-left: 3.33em;&#x000A;  padding-left: 0.625em;&#x000A;  position: relative;&#x000A;  visibility: visible;&#x000A;}&#x000A;&#x000A;.form-switch + label::before {&#x000A;  background: rgba(0, 0, 0, 0.2);&#x000A;  border-radius: 2em;&#x000A;  border: 4px solid #403132;&#x000A;  content: "Off";&#x000A;  display: block;&#x000A;  font-size: 50%;&#x000A;  height: 2em;&#x000A;  line-height: 2;&#x000A;  padding: 0 1em 0 3em;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;  text-align: center;&#x000A;  top: 0;&#x000A;  width: 2em;&#x000A;  z-index: 10;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 1em;&#x000A;  border: 4px solid #403132;&#x000A;  content: "";&#x000A;  display: block;&#x000A;  height: 1em;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;  top: 0;&#x000A;  transform: translateX(-2em);&#x000A;  width: 1em;&#x000A;  z-index: 11;&#x000A;}&#x000A;&#x000A;/* Switch States */&#x000A;&#x000A;.form-switch + label:hover {&#x000A;  cursor: pointer&#x000A;}&#x000A;&#x000A;.form-switch:checked + label::before {&#x000A;  background: white;&#x000A;  content: "On";&#x000A;  padding: 0 3em 0 1em;&#x000A;}&#x000A;&#x000A;.form-switch:checked + label::after {&#x000A;  transform: translateX(0);&#x000A;}&#x000A;&#x000A;.form-switch:focus + label::after,&#x000A;.form-switch + label:hover::after {&#x000A;  background-color: #f8fce8;&#x000A;}&#x000A;</code></pre>
+              </div>
+              <div class="tab" id="tab-switch-beside-animation">
+                <strong class="tab-label">Animation</strong>
+                <pre class="highlight plaintext"><code>/* Switch Animation */&#x000A;&#x000A;.form-switch + label::before {&#x000A;  transition: background 150ms ease-out, padding 100ms ease-out;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1);&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -217,20 +294,41 @@
             <div class="g-b g-b--m--1of2">
               <label>
                 Select
+                <select class="form-select" tabindex="7">
+                  <optgroup label="Group A">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                  </optgroup>
+                  <optgroup label="Group B">
+                    <option>Option 3</option>
+                  </optgroup>
+                </select>
               </label>
-              <select class="form-select" tabindex="7">
-                <optgroup label="Group A">
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                </optgroup>
-                <optgroup label="Group B">
-                  <option>Option 3</option>
-                </optgroup>
-              </select>
             </div>
-            <div class="g-b g-b--m--1of2">
-              <strong>HTML</strong>
-              <pre><code class="highlight plaintext">&lt;label&gt;Select&lt;/label&gt;&#x000A;&lt;select&gt;&#x000A;  &lt;optgroup label="Group A"&gt;&#x000A;    &lt;option&gt;Option 1&lt;/option&gt;&#x000A;    &lt;option&gt;Option 2&lt;/option&gt;&#x000A;  &lt;/optgroup&gt;&#x000A;  &lt;optgroup label="Group B"&gt;&#x000A;    &lt;option&gt;Option 3&lt;/option&gt;&#x000A;  &lt;/optgroup&gt;&#x000A;&lt;/select&gt;&#x000A;</code></pre>
+            <div class="g-b g-b--m--1of2 has-tab">
+              <menu class="tab-nav">
+                <li>
+                  <button data-target="#tab-select-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-select-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-select-animation">Animation</button>
+                </li>
+              </menu>
+              <div class="tab" id="tab-select-html">
+                <strong class="tab-label">HTML</strong>
+                <pre class="highlight plaintext"><code>&lt;label&gt;&#x000A;  Select&#x000A;  &lt;select&gt;&#x000A;    &lt;optgroup label="Group A"&gt;&#x000A;      &lt;option&gt;Option 1&lt;/option&gt;&#x000A;      &lt;option&gt;Option 2&lt;/option&gt;&#x000A;    &lt;/optgroup&gt;&#x000A;    &lt;optgroup label="Group B"&gt;&#x000A;      &lt;option&gt;Option 3&lt;/option&gt;&#x000A;    &lt;/optgroup&gt;&#x000A;  &lt;/select&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
+              </div>
+              <div class="tab" id="tab-select-css">
+                <strong class="tab-label">CSS</strong>
+                <pre class="highlight plaintext"><code>/* Select Base */&#x000A;&#x000A;select {&#x000A;  -webkit-appearance: none;&#x000A;  background-color: transparent;&#x000A;  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJNNTEyIDY4LjZMMjU2IDUxMiAwIDY4LjZ6Ii8+PC9zdmc+);&#x000A;  background-position: 90% 50%;&#x000A;  background-repeat: no-repeat;&#x000A;  background-size: auto 25%;&#x000A;  border-radius: 12px;&#x000A;  border: 4px solid #403132;&#x000A;  display: block;&#x000A;  padding: 6px 48px 6px 12px;&#x000A;}&#x000A;&#x000A;/* Select Browser Hacks */&#x000A;@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {&#x000A;  select::-ms-expand {&#x000A;    display: none;&#x000A;  }&#x000A;  select:focus::-ms-value {&#x000A;    background: transparent;&#x000A;    color: #222;&#x000A;  }&#x000A;}&#x000A;@-moz-document url-prefix() {&#x000A;  select {&#x000A;    background-image: none;&#x000A;  }&#x000A; }&#x000A;select::-moz-focusring {&#x000A;  color: transparent;&#x000A;  text-shadow: 0 0 0 #000;&#x000A;}&#x000A;&#x000A;</code></pre>
+              </div>
+              <div class="tab" id="tab-select-animation">
+                <strong class="tab-label">Animation</strong>
+                <pre class="highlight plaintext"><code>select {&#x000A;  transition: background-color 250ms ease-out, -webkit-transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;  transition: background-color 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;select:hover {&#x000A;  background-color: rgba(255, 255, 255, 0.4);&#x000A;  cursor: pointer;&#x000A;}&#x000A;select:focus, .form-select:hover {&#x000A;  background-color: rgba(255, 255, 255, 0.4);&#x000A;  outline: none;&#x000A;}&#x000A;&#x000A;</code></pre>
+              </div>
             </div>
           </div>
         </div>
@@ -239,32 +337,34 @@
         <div class="well cell">
           <div class="g">
             <div class="g-b g-b--m--1of2">
-              <input class="form-checkbox" id="check-0" name="checkbox" required tabindex="8" type="checkbox">
-              <label for="check-0">Checkbox 1</label>
-              <input class="form-checkbox" id="check-1" name="checkbox" required tabindex="8" type="checkbox">
-              <label for="check-1">Checkbox 2</label>
-              <input class="form-checkbox" id="check-2" name="checkbox" required tabindex="8" type="checkbox">
-              <label for="check-2">Checkbox 3</label>
-              <input class="form-checkbox" id="check-3" name="checkbox" required tabindex="8" type="checkbox">
-              <label for="check-3">Checkbox 4</label>
+              <label>
+                Date (Chrome / Opera)
+                <input class="form-date" tabindex="4" type="date">
+              </label>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-checkbox-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-checkbox-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-checkbox-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-date-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-date-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-date-animation">Animation</button>
+                </li>
               </menu>
-              <div class="tab" id="tab-checkbox-html">
+              <div class="tab" id="tab-date-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;input type="checkbox" id="check" class="form-checkbox"&gt;&#x000A;&lt;label for="check"&gt;Checkbox Label&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;label&gt;&#x000A;  Date&#x000A;  &lt;input type="date"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-checkbox-css">
+              <div class="tab" id="tab-date-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Checkbox Base */&#x000A;&#x000A;.form-checkbox {&#x000A;  display: block;&#x000A;  height: 0;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;}&#x000A;&#x000A;.form-checkbox + label {&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  position: relative;&#x000A;}&#x000A;&#x000A;.form-checkbox + label::before {&#x000A;  border-radius: 3px;&#x000A;  box-shadow: 0 0 0 3px #403132;&#x000A;  content: "";&#x000A;  display: inline-block;&#x000A;  height: 0.75em;&#x000A;  margin-right: 0.5em;&#x000A;  width: 0.75em;&#x000A;}&#x000A;&#x000A;.form-checkbox + label::after {&#x000A;  background-color: #403132;&#x000A;  border-radius: 2px;&#x000A;  box-shadow: 0;&#x000A;  color: #e7f4b4;&#x000A;  content: "";&#x000A;  display: block;&#x000A;  height: calc(0.75em - 4px);&#x000A;  left: 2px;&#x000A;  opacity: 0;&#x000A;  overflow: hidden;&#x000A;  position: absolute;&#x000A;  top: 0.3125em;&#x000A;  transform: scale(0.4);&#x000A;  width: calc(0.75em - 4px);&#x000A;  z-index: 2;&#x000A;}&#x000A;&#x000A;/* Checkbox States */&#x000A;&#x000A;.form-checkbox + label:hover::before {&#x000A;  background: rgba(255, 255, 255, 0.6);&#x000A;}&#x000A;&#x000A;.form-checkbox:active + label::before {&#x000A;  background: rgba(0, 0, 0, 0.2);&#x000A;  transform: scale(1);&#x000A;}&#x000A;&#x000A;.form-checkbox:focus + label::before {&#x000A;  background: rgba(255, 255, 255, 0.6);&#x000A;  transform: scale(1.2);&#x000A;}&#x000A;&#x000A;.form-checkbox:checked + label::after {&#x000A;  transform: scale(1);&#x000A;  opacity: 1;&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Date Base */&#x000A;&#x000A;[type=date] {&#x000A;  background: none;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  font: normal 400 24px/1.4 sans-serif;&#x000A;  max-width: 100%;&#x000A;  padding: 6px 12px;&#x000A;  width: 15em;&#x000A;}&#x000A;&#x000A;/* Date States */&#x000A;&#x000A;[type=date]:focus {&#x000A;  background: rgba(black, 0.1);&#x000A;  transform: scale(1.05);&#x000A;}&#x000A;[type=date]:focus:hover {&#x000A;  cursor: text;&#x000A;}&#x000A;[type=date]:hover {&#x000A;  background: rgba(255, 255, 255, 0.4);&#x000A;}&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-checkbox-animation">
+              <div class="tab" id="tab-date-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">.form-checkbox + label::before {&#x000A;  transition: background-color 250ms ease-out, transform 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;&#x000A;.form-checkbox + label::after {&#x000A;  transition: opacity 100ms linear, transform 100ms ease-out;&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Date Animation */&#x000A;&#x000A;[type=date] {&#x000A;  transition: background 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -272,44 +372,30 @@
         <div class="well cell">
           <div class="g">
             <div class="g-b g-b--m--1of2">
-              <input class="form-radio" id="radio-0" name="radio" required tabindex="9" type="radio">
-              <label for="radio-0">Radio 1</label>
-              <input class="form-radio" id="radio-1" name="radio" required tabindex="9" type="radio">
-              <label for="radio-1">Radio 2</label>
-              <input class="form-radio" id="radio-2" name="radio" required tabindex="9" type="radio">
-              <label for="radio-2">Radio 3</label>
-              <input class="form-radio" id="radio-3" name="radio" required tabindex="9" type="radio">
-              <label for="radio-3">Radio 4</label>
-            </div>
-            <div class="g-b g-b--m--1of2">
-              <strong>HTML</strong>
-              <pre><code class="highlight plaintext">&lt;input type="checkbox" id="check" class="form-checkbox"&gt;&#x000A;&lt;label for="check"&gt;Checkbox Label&lt;/label&gt;&#x000A;</code></pre>
-            </div>
-          </div>
-        </div>
-        <div class="well cell">
-          <div class="g">
-            <div class="g-b g-b--m--1of2">
-              <input class="form-checkbox-switch" id="switch-0" required tabindex="10" type="checkbox">
-              <label for="switch-0">Switch Below</label>
+              <label>
+                Color
+                <input class="form-color" tabindex="5" type="color">
+              </label>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-switch-below-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-switch-below-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-switch-below-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-color-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-color-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-color-animation">Animation</button>
+                </li>
               </menu>
-              <div class="tab" id="tab-switch-below-html">
+              <div class="tab" id="tab-color-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;input class="form-switch" id="switch" type="text"&gt;&#x000A;&lt;label for="switch"&gt;Switch Below&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;label&gt;&#x000A;  Color&#x000A;  &lt;input type="color"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-switch-below-css">
+              <div class="tab" id="tab-color-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Switch Base */&#x000A;&#x000A;.form-switch {&#x000A;  display: block;&#x000A;  height: 0;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;}&#x000A;&#x000A;.form-switch + label {&#x000A;  display: block;&#x000A;  margin-bottom: 2em;&#x000A;  position: relative;&#x000A;  visibility: visible;&#x000A;}&#x000A;&#x000A;.form-switch + label::before {&#x000A;  background: rgba(0, 0, 0, 0.2);&#x000A;  border-radius: 2em;&#x000A;  border: 4px solid #403132;&#x000A;  content: "Off";&#x000A;  display: block;&#x000A;  font-size: 50%;&#x000A;  height: 2em;&#x000A;  left: 0;&#x000A;  line-height: 2;&#x000A;  padding: 0 1em 0 3em;&#x000A;  position: absolute;&#x000A;  text-align: center;&#x000A;  top: 100%;&#x000A;  width: 2em;&#x000A;  z-index: 10;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 1em;&#x000A;  border: 4px solid #403132;&#x000A;  content: "";&#x000A;  display: block;&#x000A;  height: 1em;&#x000A;  left: 0;&#x000A;  position: absolute;&#x000A;  top: 100%;&#x000A;  width: 1em;&#x000A;  z-index: 11;&#x000A;}&#x000A;&#x000A;/* Switch States */&#x000A;&#x000A;.form-switch + label:hover {&#x000A;  cursor: pointer&#x000A;}&#x000A;&#x000A;.form-switch:checked + label::before {&#x000A;  background: white;&#x000A;  content: "On";&#x000A;  padding: 0 3em 0 1em;&#x000A;}&#x000A;&#x000A;.form-switch:checked + label::after {&#x000A;  transform: translateX(2em);&#x000A;}&#x000A;&#x000A;.form-switch:focus + label::after,&#x000A;.form-switch + label:hover::after {&#x000A;  background-color: #f8fce8;&#x000A;}&#x000A;</code></pre>
-              </div>
-              <div class="tab" id="tab-switch-below-animation">
-                <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">/* Switch Animation */&#x000A;&#x000A;.form-switch + label::before {&#x000A;  transition: background 150ms ease-out, padding 100ms ease-out;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Color Base */&#x000A;&#x000A;[type=color] {&#x000A;  background-color: transparent;&#x000A;  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…02NC4xIDExMi4yLTExMi4yYzI2LjUtMjYuNSAyNi41LTY5LjYgMC05Ni4xeiIvPjwvc3ZnPg==);&#x000A;  background-position: 90% 50%;&#x000A;  background-repeat: no-repeat;&#x000A;  background-size: auto 50%;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  height: 48px;&#x000A;  padding: 0 48px 0 0;&#x000A;  width: 5em;&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -317,26 +403,34 @@
         <div class="well cell">
           <div class="g">
             <div class="g-b g-b--m--1of2">
-              <input class="form-checkbox-switch--beside" id="switch-1" required tabindex="11" type="checkbox">
-              <label for="switch-1">Switch Beside</label>
+              <label>
+                Range
+                <input class="form-range" tabindex="6" type="range">
+              </label>
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-switch-beside-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-switch-beside-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-switch-beside-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-range-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-range-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-range-animation">Animation</button>
+                </li>
               </menu>
-              <div class="tab" id="tab-switch-beside-html">
+              <div class="tab" id="tab-range-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;input class="form-switch" id="switch" type="text"&gt;&#x000A;&lt;label for="switch"&gt;Switch Beside&lt;/label&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;label&gt;&#x000A;  Color&#x000A;  &lt;input type="range"&gt;&#x000A;&lt;/label&gt;&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-switch-beside-css">
+              <div class="tab" id="tab-range-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">/* Switch Base */&#x000A;&#x000A;.form-switch {&#x000A;  display: block;&#x000A;  height: 0;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;}&#x000A;&#x000A;.form-switch + label {&#x000A;  display: block;&#x000A;  margin-left: 3.33em;&#x000A;  padding-left: 0.625em;&#x000A;  position: relative;&#x000A;  visibility: visible;&#x000A;}&#x000A;&#x000A;.form-switch + label::before {&#x000A;  background: rgba(0, 0, 0, 0.2);&#x000A;  border-radius: 2em;&#x000A;  border: 4px solid #403132;&#x000A;  content: "Off";&#x000A;  display: block;&#x000A;  font-size: 50%;&#x000A;  height: 2em;&#x000A;  line-height: 2;&#x000A;  padding: 0 1em 0 3em;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;  text-align: center;&#x000A;  top: 0;&#x000A;  width: 2em;&#x000A;  z-index: 10;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 1em;&#x000A;  border: 4px solid #403132;&#x000A;  content: "";&#x000A;  display: block;&#x000A;  height: 1em;&#x000A;  position: absolute;&#x000A;  right: 100%;&#x000A;  top: 0;&#x000A;  transform: translateX(-2em);&#x000A;  width: 1em;&#x000A;  z-index: 11;&#x000A;}&#x000A;&#x000A;/* Switch States */&#x000A;&#x000A;.form-switch + label:hover {&#x000A;  cursor: pointer&#x000A;}&#x000A;&#x000A;.form-switch:checked + label::before {&#x000A;  background: white;&#x000A;  content: "On";&#x000A;  padding: 0 3em 0 1em;&#x000A;}&#x000A;&#x000A;.form-switch:checked + label::after {&#x000A;  transform: translateX(0);&#x000A;}&#x000A;&#x000A;.form-switch:focus + label::after,&#x000A;.form-switch + label:hover::after {&#x000A;  background-color: #f8fce8;&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Range Base */&#x000A;&#x000A;[type=range] {&#x000A;  background: none;&#x000A;  cursor: pointer;&#x000A;  display: block;&#x000A;  height: 48px;&#x000A;  width: 10em;&#x000A;}&#x000A;&#x000A;/* Webkit */&#x000A;&#x000A;[type=range] {&#x000A;  -webkit-appearance: none;&#x000A;}&#x000A;&#x000A;[type=range]::-webkit-slider-runnable-track {&#x000A;  background: #403132;&#x000A;  border-radius: 4px;&#x000A;  border: none;&#x000A;  height: 4px;&#x000A;}&#x000A;&#x000A;[type=range]::-webkit-slider-thumb {&#x000A;  -webkit-appearance: none;&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 50%;&#x000A;  border: 4px solid #403132;&#x000A;  height: 24px;&#x000A;  width: 24px;&#x000A;  /* Webkit alignment hack */&#x000A;  margin-top: 2px;&#x000A;  transform: translateY(-50%);&#x000A;}&#x000A;&#x000A;[type=range]:focus::-webkit-slider-thumb,&#x000A;[type=range]:hover::-webkit-slider-thumb {&#x000A;  background: #f8fce8;&#x000A;}&#x000A;&#x000A;/* Firefox */&#x000A;&#x000A;[type=range]::-moz-range-track {&#x000A;  background: #403132;&#x000A;  border-radius: 4px;&#x000A;  border: none;&#x000A;  height: 4px;&#x000A;}&#x000A;&#x000A;[type=range]::-moz-range-thumb {&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 50%;&#x000A;  border: 4px solid #403132;&#x000A;  height: #403132;&#x000A;  width: #403132;&#x000A;}&#x000A;&#x000A;[type=range]:hover::-moz-range-thumb,&#x000A;[type=range]:focus::-moz-range-thumb {&#x000A;  background: #f8fce8;&#x000A;}&#x000A;&#x000A;/* IE */&#x000A;&#x000A;[type=range]::-ms-track {&#x000A;  background: rgba(64, 49, 50, 0.7);&#x000A;  border-radius: 4px;&#x000A;  border: none;&#x000A;  height: 4px;&#x000A;}&#x000A;&#x000A;[type=range]::-ms-fill-lower {&#x000A;  background: #403132;&#x000A;  border-radius: 4px;&#x000A;}&#x000A;&#x000A;[type=range]::-ms-fill-upper {&#x000A;  background: none;&#x000A;}&#x000A;&#x000A;[type=range]::-ms-thumb {&#x000A;  background: #e7f4b4;&#x000A;  border-radius: 50%;&#x000A;  border: 4px solid #403132;&#x000A;  height: 24px;&#x000A;  width: 24px;&#x000A;}&#x000A;&#x000A;[type=range]:hover::-ms-thumb,&#x000A;[type=range]:focus::-ms-thumb {&#x000A;  background: #f8fce8;&#x000A;}&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-switch-beside-animation">
+              <div class="tab" id="tab-range-animation">
                 <strong class="tab-label">Animation</strong>
-                <pre><code class="highlight plaintext">/* Switch Animation */&#x000A;&#x000A;.form-switch + label::before {&#x000A;  transition: background 150ms ease-out, padding 100ms ease-out;&#x000A;}&#x000A;&#x000A;.form-switch + label::after {&#x000A;  transition: background 150ms linear, transform 150ms cubic-bezier(1, 0, 0, 1);&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Range Animation */&#x000A;&#x000A;[type=range]::-webkit-slider-thumb {&#x000A;  transition: background-color 250ms ease-out;&#x000A;}&#x000A;&#x000A;[type=range]::-moz-range-thumb {&#x000A;  transition: background-color 250ms ease-out;&#x000A;}&#x000A;&#x000A;[type=range]::-ms-thumb {&#x000A;  transition: background-color 250ms ease-out;&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>
@@ -350,17 +444,27 @@
             </div>
             <div class="g-b g-b--m--1of2 has-tab">
               <menu class="tab-nav">
-                <li><a data-target="#tab-submit-html" href="javascript:">HTML</a></li>
-                <li><a data-target="#tab-submit-css" href="javascript:">CSS</a></li>
-                <li><a data-target="#tab-submit-animation" href="javascript:">Animation</a></li>
+                <li>
+                  <button data-target="#tab-submit-html">HTML</button>
+                </li>
+                <li>
+                  <button data-target="#tab-submit-css">CSS</button>
+                </li>
+                <li>
+                  <button data-target="#tab-submit-animation">Animation</button>
+                </li>
               </menu>
               <div class="tab" id="tab-submit-html">
                 <strong class="tab-label">HTML</strong>
-                <pre><code class="highlight plaintext">&lt;input type="submit"&gt;&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>&lt;input type="submit"&gt;&#x000A;</code></pre>
               </div>
-              <div class="tab" id="tab-submit-html">
+              <div class="tab" id="tab-submit-css">
                 <strong class="tab-label">CSS</strong>
-                <pre><code class="highlight plaintext">input[type=submit] {&#x000A;  background-color: ;&#x000A;}&#x000A;</code></pre>
+                <pre class="highlight plaintext"><code>/* Submit Base */&#x000A;&#x000A;[type=submit] {&#x000A;  background: #403132;&#x000A;  border-radius: 6px;&#x000A;  border: 4px solid #403132;&#x000A;  color: #e7f4b4;&#x000A;  padding: 12px 24px;&#x000A;}&#x000A;</code></pre>
+              </div>
+              <div class="tab" id="tab-submit-animation">
+                <strong class="tab-label">Animation</strong>
+                <pre class="highlight plaintext"><code>/* Submit Animation */&#x000A;&#x000A;[type=submit] {&#x000A;    transition: background 250ms ease-out;&#x000A;}&#x000A;[type=submit]:hover {&#x000A;  background: rgba(64, 49, 50, 0.8);&#x000A;}&#x000A;[type=submit]:active {&#x000A;  box-shadow: none;&#x000A;  -webkit-transform: translateY(2px);&#x000A;  transform: translateY(2px);&#x000A;}&#x000A;</code></pre>
               </div>
             </div>
           </div>

@@ -389,6 +389,9 @@ html {
 body {
   font-size: 100%; }
 
+* {
+  box-sizing: border-box; }
+
 ul, p {
   margin-bottom: 24px;
   margin-top: 0; }
@@ -435,6 +438,9 @@ a {
 img {
   height: auto;
   max-width: 100%; }
+
+fieldset {
+  border: 0; }
 
 input:focus {
   outline: none; }
@@ -586,20 +592,26 @@ td {
   font: normal 400 24px/1.4 "aaux-next", sans-serif;
   padding: 6px 48px 6px 12px;
   transition: background-color 250ms ease-out, -webkit-transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);
-  transition: background-color 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1);
-  height: 60px; }
-  .form-select::before {
-    content: "v";
-    font-size: 200%;
-    z-index: 10; }
-  .form-select optgroup {
-    font-size: 50%; }
+  transition: background-color 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1); }
   .form-select:hover {
     background-color: rgba(255, 255, 255, 0.4);
     cursor: pointer; }
   .form-select:focus, .form-select:hover {
     background-color: rgba(255, 255, 255, 0.4);
     outline: none; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .form-selectselect::-ms-expand {
+    display: none; }
+  .form-selectselect:focus::-ms-value {
+    background: transparent;
+    color: #222; } }
+@-moz-document url-prefix() {
+  .form-select {
+    background-image: none; } }
+.form-select::-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
 
 .form-checkbox {
   display: block;
@@ -1128,11 +1140,14 @@ td {
     list-style-type: none;
     margin: 0;
     padding-right: 1em; }
-  .tab-nav a {
+  .tab-nav button {
+    background: none;
+    border: none;
     color: rgba(64, 49, 50, 0.5);
     font-weight: bold;
+    outline: none;
     transition: color 250ms ease-out; }
-    .tab-nav a:hover {
+    .tab-nav button:hover {
       color: rgba(64, 49, 50, 0.75); }
 
 .tab-nav.is-showing {
@@ -1140,7 +1155,7 @@ td {
   display: -ms-flexbox;
   display: flex; }
 
-.tab-nav a.is-viewing {
+.tab-nav button.is-viewing {
   color: #403132; }
 
 .tab.is-hiding {
