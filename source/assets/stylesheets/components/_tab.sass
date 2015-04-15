@@ -30,9 +30,12 @@
     list-style-type: none
     margin: 0
     padding-right: 1em
-  a
+  button
+    background: none
+    border: none
     color: rgba($c-text, 0.5)
     font-weight: bold
+    outline: none
     transition: color 250ms ease-out
     &:hover
       color: rgba($c-text, 0.75)
@@ -42,7 +45,7 @@
 .tab-nav.is-showing
   display: flex
 
-.tab-nav a.is-viewing
+.tab-nav button.is-viewing
   color: $c-text
 
 // -------------------------------------

@@ -29,7 +29,7 @@ var tabLabel = document.querySelectorAll('.tab-label');
 var tabNav = document.querySelectorAll('.tab-nav');
 [].forEach.call(tabNav, function(el) {
   el.classList.add(state.show);
-  el.querySelector('a').classList.add(state.active);
+  el.querySelector('button').classList.add(state.active);
 });
 
 var tabContainers = document.querySelectorAll('.has-tab');
@@ -45,7 +45,7 @@ var tabContainers = document.querySelectorAll('.has-tab');
 
 // 02: add event listeners
 
-var tabLinks = document.querySelectorAll('.tab-nav a');
+var tabLinks = document.querySelectorAll('.tab-nav button');
 [].forEach.call(tabLinks, function(el) {
   el.addEventListener('click', function(e) {
     target = e.target.dataset.target;
@@ -58,7 +58,7 @@ var tabLinks = document.querySelectorAll('.tab-nav a');
 
 function showTab(selector, collection) {
   tabs = collection.querySelectorAll('.tab');
-  tabNav = collection.querySelectorAll('.tab-nav a');
+  tabNav = collection.querySelectorAll('.tab-nav button');
   var i = 0;
   [].forEach.call(tabNav, function(el) {
     if(el.dataset.target === selector)

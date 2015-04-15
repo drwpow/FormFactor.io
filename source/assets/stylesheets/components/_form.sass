@@ -185,12 +185,6 @@
   font: normal 400 #{$b-input}/#{$b-lineHeight-input} $b-input-family
   padding: $b-space-xs $b-space-l $b-space-xs $b-space-s
   transition: background-color 250ms ease-out, transform 150ms 100ms cubic-bezier(0, 0.5, 0.5, 1)
-  &::before
-    content: "v"
-    font-size: 200%
-    z-index: 10
-  optgroup
-    font-size: 50%
   &:hover
     background-color: rgba(white, 0.4)
     cursor: pointer
@@ -198,8 +192,24 @@
     background-color: rgba(white, 0.4)
     outline: none
 
-  // Moz Fix
-  height: #{$b-input * 2.5}
+// ----- Browser Hacks ----- //
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .form-selectselect
+    &::-ms-expand
+      display: none
+
+    &:focus::-ms-value
+      background: transparent
+      color: #222
+
+@-moz-document url-prefix()
+  .form-select
+    background-image: none
+
+.form-select::-moz-focusring
+  color: transparent
+  text-shadow: 0 0 0 #000
 
 // -------------------------------------
 //   Checkboxes
